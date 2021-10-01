@@ -1,2 +1,5 @@
 plugins/.DS_Store
 .env
+
+# misc
+.DS_Store

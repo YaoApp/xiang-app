@@ -1,0 +1,22 @@
+{
+      "name": "服务类型接口",
+      "version": "1.0.0",
+      "description": "服务类型API",
+      "group": "kind",
+      "guard": "-",
+      "paths": [
+            {
+                  "path": "/get",
+                  "method": "GET",
+                  "guard": "-",
+                  "process": "models.kind.Get",
+                  "in": [
+                        ":params"
+                  ],
+                  "out": {
+                        "status": 200,
+                        "type": "application/json"
+                  }
+            }
+      ]
+}

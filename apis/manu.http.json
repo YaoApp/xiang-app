@@ -1,0 +1,22 @@
+{
+      "name": "厂商接口",
+      "version": "1.0.0",
+      "description": "厂商API",
+      "group": "manu",
+      "guard": "-",
+      "paths": [
+            {
+                  "path": "/get",
+                  "method": "GET",
+                  "guard": "-",
+                  "process": "models.manu.Get",
+                  "in": [
+                        ":params"
+                  ],
+                  "out": {
+                        "status": 200,
+                        "type": "application/json"
+                  }
+            }
+      ]
+}
