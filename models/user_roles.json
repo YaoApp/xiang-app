@@ -27,7 +27,7 @@
       "type": "enum",
       "default": "enabled",
       "option": ["enabled", "disabled"],
-      "comment": "状态 enabled 开启, disabled 关闭",
+      "comment": "状态",
       "index": true
     }
   ],

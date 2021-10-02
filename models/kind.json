@@ -42,7 +42,7 @@
       "name": "status",
       "type": "enum",
       "option": ["enabled", "disabled"],
-      "comment": "状态 enabled 开启, disabled 关闭",
+      "comment": "状态",
       "default": "enabled",
       "index": true
     },

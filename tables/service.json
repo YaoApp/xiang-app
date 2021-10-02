@@ -59,7 +59,7 @@
                               ]
                         },
                         null,
-                        15
+                        10
                   ]
             },
             "find": {
@@ -465,36 +465,28 @@
             "layout": {
                   "columns": [
                         {
-                              "name": "服务名称",
-                              "width": 6
+                              "name": "服务名称"
                         },
                         {
-                              "name": "所属厂商",
-                              "width": 6
+                              "name": "所属厂商"
                         },
                         {
-                              "name": "服务类型",
-                              "width": 4
+                              "name": "服务类型"
                         },
                         {
-                              "name": "状态",
-                              "width": 4
+                              "name": "状态"
                         },
                         {
-                              "name": "服务领域",
-                              "width": 4
+                              "name": "服务领域"
                         },
                         {
-                              "name": "计费方式",
-                              "width": 4
+                              "name": "计费方式"
                         },
                         {
-                              "name": "创建时间",
-                              "width": 6
+                              "name": "创建时间"
                         },
                         {
-                              "name": "更新时间",
-                              "width": 6
+                              "name": "更新时间"
                         }
                   ],
                   "filters": [
