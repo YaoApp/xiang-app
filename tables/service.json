@@ -64,6 +64,7 @@
             },
             "find": {
                   "process": "models.service.Find",
+                  "guard": "-",
                   "default": [
                         null,
                         {
@@ -122,7 +123,7 @@
                         "type": "select",
                         "props": {
                               "value": ":manu.id",
-                              "searchable": true,
+                              "showSearch": true,
                               "remote": {
                                     "api": "/api/manu/get",
                                     "query": {
@@ -148,10 +149,9 @@
                         "type": "select",
                         "props": {
                               "value": ":kind.id",
-                              "tree": true,
-                              "searchable": true,
+                              "showSearch": true,
                               "remote": {
-                                    "api": "/api/kind/tree",
+                                    "api": "/api/kind/get",
                                     "query": {
                                           "select": [
                                                 "id",
@@ -175,9 +175,8 @@
                         "type": "select",
                         "props": {
                               "value": ":fields",
-                              "searchable": true,
-                              "inputable": true,
-                              "multiple": true,
+                              "showSearch": true,
+                              "mode": "multiple",
                               "options": [
                                     {
                                           "label": "视频会议",
@@ -267,7 +266,7 @@
                         "type": "select",
                         "props": {
                               "value": ":price_options",
-                              "multiple": true,
+                              "mode": "multiple",
                               "options": [
                                     {
                                           "label": "按年订阅",
@@ -305,8 +304,7 @@
                         "type": "select",
                         "props": {
                               "value": ":industries",
-                              "inputable": true,
-                              "multiple": true,
+                              "mode": "multiple",
                               "options": [
                                     {
                                           "label": "房地产",
@@ -536,23 +534,23 @@
                               "columns": [
                                     {
                                           "name": "服务名称",
-                                          "width": 6
+                                          "width": 12
                                     },
                                     {
                                           "name": "所属厂商",
-                                          "width": 6
+                                          "width": 12
                                     },
                                     {
                                           "name": "服务类型",
-                                          "width": 6
+                                          "width": 12
                                     },
                                     {
                                           "name": "状态",
-                                          "width": 6
+                                          "width": 12
                                     },
                                     {
                                           "name": "rank",
-                                          "width": 6
+                                          "width": 12
                                     }
                               ]
                         },
@@ -560,9 +558,18 @@
                               "title": "数据标签",
                               "description": "",
                               "columns": [
-                                    "服务领域",
-                                    "计费方式",
-                                    "行业覆盖"
+                                    {
+                                          "name": "服务领域",
+                                          "width": 12
+                                    },
+                                    {
+                                          "name": "计费方式",
+                                          "width": 12
+                                    },
+                                    {
+                                          "name": "行业覆盖",
+                                          "width": 24
+                                    }
                               ]
                         }
                   ]
@@ -575,7 +582,12 @@
                               "label": "保存"
                         }
                   },
-                  "delete": {}
+                  "delete": {
+                        "type": "button",
+                        "props": {
+                              "label": "删除"
+                        }
+                  }
             }
       },
       "insert": {},
