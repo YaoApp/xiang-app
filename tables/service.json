@@ -91,6 +91,9 @@
                         }
                   ]
             },
+            "save": {
+                  "guard": "-"
+            },
             "setting": {
                   "guard": "-"
             }
