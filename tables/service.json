@@ -50,13 +50,7 @@
                                                 ]
                                           }
                                     }
-                              },
-                              "wheres": [
-                                    {
-                                          "column": "status",
-                                          "value": "enabled"
-                                    }
-                              ]
+                              }
                         },
                         null,
                         10
@@ -68,9 +62,6 @@
                   "default": [
                         null,
                         {
-                              "select": [
-                                    "manu_id"
-                              ],
                               "withs": {
                                     "manu": {
                                           "query": {
@@ -266,7 +257,7 @@
                   "view": {
                         "name": "tags",
                         "props": {
-                              "value": ":fields"
+                              "value": ":price_options"
                         }
                   },
                   "edit": {
@@ -340,19 +331,19 @@
             "状态": {
                   "label": "状态",
                   "view": {
-                        "name": "tags",
+                        "type": "tag",
                         "props": {
                               "value": ":status",
                               "options": [
                                     {
                                           "label": "开启",
                                           "value": "enabled",
-                                          "color": "primary"
+                                          "color": "#41b883"
                                     },
                                     {
                                           "label": "关闭",
                                           "value": "disabled",
-                                          "color": "danger"
+                                          "color": "#f50"
                                     }
                               ]
                         }
@@ -489,9 +480,6 @@
                         },
                         {
                               "name": "创建时间"
-                        },
-                        {
-                              "name": "更新时间"
                         }
                   ],
                   "filters": [
