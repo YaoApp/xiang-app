@@ -517,6 +517,29 @@
                   "deleteSelect": {},
                   "pagination": {},
                   "setting": {}
+            },
+            "option": {
+                  "batch": {
+                        "delete": {},
+                        "columns": [
+                              {
+                                    "name": "服务名称",
+                                    "width": 12
+                              },
+                              {
+                                    "name": "所属厂商",
+                                    "width": 12
+                              },
+                              {
+                                    "name": "服务类型",
+                                    "width": 12
+                              },
+                              {
+                                    "name": "状态",
+                                    "width": 12
+                              }
+                        ]
+                  }
             }
       },
       "edit": {
