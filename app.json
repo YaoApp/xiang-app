@@ -1,5 +1,9 @@
 {
-  "name": "象传应用",
-  "short": "象传",
-  "description": "象传应用后台"
+      "name": "象传应用",
+      "short": "象传",
+      "description": "象传应用后台",
+      "option": {
+            "nav_user": "xiang.user",
+            "nav_menu": "menu"
+      }
 }

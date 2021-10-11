@@ -76,9 +76,9 @@
       "relations": {
             "children": {
                   "type": "hasMany",
-                  "model": "xiang.menu",
-                  "key": "parent",
-                  "foreign": "id",
+                  "model": "menu",
+                  "key": "id",
+                  "foreign": "parent",
                   "query": {
                         "select": [
                               "name",

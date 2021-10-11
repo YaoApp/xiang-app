@@ -16,7 +16,13 @@
                                           "query": {
                                                 "select": [
                                                       "name",
-                                                      "id"
+                                                      "id",
+                                                      "icon",
+                                                      "status",
+                                                      "path",
+                                                      "rank",
+                                                      "blocks",
+                                                      "visible_menu"
                                                 ]
                                           }
                                     }
@@ -76,7 +82,7 @@
                         "type": "select",
                         "props": {
                               "value": ":blocks",
-                              "placeholder":"请选择是否为block布局",
+                              "placeholder": "请选择是否为block布局",
                               "options": [
                                     {
                                           "label": "是",
@@ -369,7 +375,7 @@
                         "type": "select",
                         "props": {
                               "value": ":visible_menu",
-                              "placeholder":"请选择是否显示",
+                              "placeholder": "请选择是否显示",
                               "options": [
                                     {
                                           "label": "是",
