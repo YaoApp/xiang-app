@@ -26,6 +26,13 @@
       "index": true
     },
     {
+      "name": "images",
+      "type": "json",
+      "comment": "营销图片",
+      "nullable": true,
+      "index": true
+    },
+    {
       "name": "kind_id",
       "type": "bigInteger",
       "length": 200,

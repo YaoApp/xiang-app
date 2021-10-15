@@ -96,16 +96,18 @@
             "营销图片": {
                   "label": "营销图片",
                   "view": {
-                        "type": "label",
+                        "type": "image",
                         "props": {
-                              "value": ":name"
+                              "value": ":images",
+                              "width": 40,
+                              "height": 40
                         }
                   },
                   "edit": {
                         "type": "upload",
                         "props": {
                               "value": ":images",
-                              "listType": "picture-card",
+                              "filetype": "image",
                               "multiple": true,
                               "maxCount": 3
                         }
@@ -480,6 +482,10 @@
                   "columns": [
                         {
                               "name": "服务名称"
+                        },
+                        {
+                              "name": "营销图片",
+                              "width": 180
                         },
                         {
                               "name": "所属厂商"
