@@ -93,6 +93,17 @@
             }
       },
       "columns": {
+            "服务信息": {
+                  "label": "服务信息",
+                  "view": {
+                        "type": "block",
+                        "components": {
+                              "avatar": "营销图片",
+                              "name": "服务名称",
+                              "desc": "服务类型"
+                        }
+                  }
+            },
             "营销图片": {
                   "label": "营销图片",
                   "view": {
@@ -481,11 +492,8 @@
             "layout": {
                   "columns": [
                         {
-                              "name": "服务名称"
-                        },
-                        {
-                              "name": "营销图片",
-                              "width": 180
+                              "name": "服务信息",
+                              "width": 300
                         },
                         {
                               "name": "所属厂商"
