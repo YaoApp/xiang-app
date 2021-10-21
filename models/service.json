@@ -46,9 +46,15 @@
                   "index": true
             },
             {
-                  "name": "usage",
+                  "name": "rate",
                   "type": "integer",
                   "comment": "使用率",
+                  "index": true
+            },
+            {
+                  "name": "usage",
+                  "type": "integer",
+                  "comment": "市场占有率",
                   "index": true
             },
             {
@@ -169,11 +175,12 @@
       },
       "values": [
             {
-                  "name": "腾讯云主机CVM",
+                  "name": "腾讯云",
                   "city": "北京",
                   "short_name": "云主机",
                   "score": 1200,
-                  "usage": 30,
+                  "usage": 8,
+                  "rate": 12,
                   "kind_id": 3,
                   "manu_id": 1,
                   "industries": [
@@ -185,11 +192,12 @@
                   ]
             },
             {
-                  "name": "腾讯云磁盘",
+                  "name": "腾讯云盘",
                   "city": "广州",
                   "short_name": "云磁盘",
                   "score": 3700,
-                  "usage": 60,
+                  "usage": 40,
+                  "rate": 4,
                   "kind_id": 6,
                   "manu_id": 1,
                   "industries": [
@@ -205,7 +213,8 @@
                   "city": "上海",
                   "short_name": "云主机",
                   "score": 9100,
-                  "usage": 90,
+                  "usage": 72,
+                  "rate": 24,
                   "kind_id": 3,
                   "manu_id": 2,
                   "industries": [
@@ -217,10 +226,11 @@
                   ]
             },
             {
-                  "name": "UCloud云主机",
+                  "name": "UCloud",
                   "short_name": "云主机",
                   "score": 6300,
-                  "usage": 10,
+                  "usage": 50,
+                  "rate": 8,
                   "city": "上海",
                   "kind_id": 3,
                   "manu_id": 3,
@@ -233,10 +243,11 @@
                   ]
             },
             {
-                  "name": "七牛静态存储",
+                  "name": "七牛",
                   "short_name": "七牛",
-                  "score": 300,
-                  "usage": 80,
+                  "score": 3000,
+                  "usage": 24,
+                  "rate": 6,
                   "city": "上海",
                   "kind_id": 3,
                   "manu_id": 3,
@@ -252,7 +263,8 @@
                   "name": "青云",
                   "short_name": "青云",
                   "score": 50,
-                  "usage": 6,
+                  "usage": 4,
+                  "rate": 2,
                   "city": "上海",
                   "kind_id": 3,
                   "manu_id": 3,
@@ -265,10 +277,11 @@
                   ]
             },
             {
-                  "name": "Amazon Web Service",
+                  "name": "AWS",
                   "short_name": "AWS",
                   "score": 12000,
-                  "usage": 89,
+                  "usage": 95,
+                  "rate": 30,
                   "city": "纽约",
                   "kind_id": 3,
                   "manu_id": 3,
@@ -284,7 +297,8 @@
                   "name": "Azure",
                   "short_name": "Azure",
                   "score": 8000,
-                  "usage": 45,
+                  "usage": 60,
+                  "rate": 10,
                   "city": "旧金山",
                   "kind_id": 3,
                   "manu_id": 3,
@@ -297,10 +311,11 @@
                   ]
             },
             {
-                  "name": "Vultr Cloud",
+                  "name": "Vultr",
                   "short_name": "Vultr",
                   "score": 2000,
-                  "usage": 20,
+                  "usage": 16,
+                  "rate": 1,
                   "city": "纽约",
                   "kind_id": 3,
                   "manu_id": 3,
@@ -316,7 +331,8 @@
                   "name": "VMware",
                   "short_name": "VMware",
                   "score": 5000,
-                  "usage": 60,
+                  "usage": 48,
+                  "rate": 3,
                   "city": "帕洛阿尔托",
                   "kind_id": 3,
                   "manu_id": 3,

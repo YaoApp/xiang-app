@@ -4,26 +4,68 @@
       "description": "指标对比用于测试",
       "nodes": [
             {
-                  "name": "行业",
+                  "name": "云厂商市占率",
                   "engine": "xiang",
                   "query": {
                         "debug": true,
                         "select": [
                               "name",
-                              "city",
-                              "score",
-                              "usage",
-                              "industries[*](string 50) as industry"
+                              "rate"
                         ],
                         "from": "$service",
-                        "orders": "score asc",
-                        "limit": 100,
-                        "groups": "industry,city"
+                        "limit": 100
+                  }
+            },
+            {
+                  "name": "云厂商积分",
+                  "engine": "xiang",
+                  "query": {
+                        "debug": true,
+                        "select": [
+                              "name",
+                              "score"
+                        ],
+                        "from": "$service",
+                        "limit": 100
+                  }
+            },
+            {
+                  "name": "云厂商使用率",
+                  "engine": "xiang",
+                  "query": {
+                        "debug": true,
+                        "select": [
+                              "name",
+                              "usage"
+                        ],
+                        "from": "$service",
+                        "limit": 100
+                  }
+            },
+            {
+                  "name": "云厂商概览",
+                  "engine": "xiang",
+                  "query": {
+                        "debug": true,
+                        "select": [
+                              "id",
+                              "name",
+                              "score",
+                              "usage",
+                              "rate"
+                        ],
+                        "from": "$service",
+                        "limit": 100
                   }
             }
       ],
       "output": {
-            "data": "{{$res.行业}}",
+            "data": {
+                  "云厂商市占率": "{{$res.云厂商市占率}}",
+                  "云厂商积分": "{{$res.云厂商积分}}",
+                  "云厂商使用率": "{{$res.云厂商使用率}}",
+                  "云厂商概览": "{{$res.云厂商概览}}"
+            },
             "query": "{{$in}}"
       },
       "apis": {
@@ -68,12 +110,224 @@
                   ],
                   "charts": [
                         {
-                              "type": "line",
-                              "props": {}
+                              "name": "云厂商使用率",
+                              "width": 12,
+                              "type": "bar",
+                              "props": {
+                                    "height": 240,
+                                    "x_key": "name",
+                                    "axisLabel": {
+                                          "interval": 0,
+                                          "textStyle": {
+                                                "fontSize": 10
+                                          }
+                                    },
+                                    "series": [
+                                          {
+                                                "name": "usage",
+                                                "type": "bar",
+                                                "colorBy": "data",
+                                                "itemStyle": {
+                                                      "borderRadius": 6
+                                                },
+                                                "splitLine": {
+                                                      "show": false
+                                                },
+                                                "axisLabel": {
+                                                      "show": false
+                                                }
+                                          }
+                                    ]
+                              }
                         },
                         {
-                              "type": "bar",
-                              "props": {}
+                              "name": "云厂商市占率",
+                              "width": 12,
+                              "type": "pie",
+                              "charts": [
+                                    {
+                                          "name": "玫瑰图",
+                                          "type": "pie",
+                                          "props": {
+                                                "height": 240,
+                                                "x_key": "name",
+                                                "tooltip": {
+                                                      "textStyle": {
+                                                            "color": "#a2a5b9",
+                                                            "fontSize": 12
+                                                      },
+                                                      "backgroundColor": "#232326",
+                                                      "borderRadius": 6
+                                                },
+                                                "series": [
+                                                      {
+                                                            "name": "rate",
+                                                            "type": "pie",
+                                                            "roseType": "area",
+                                                            "radius": [
+                                                                  10,
+                                                                  100
+                                                            ],
+                                                            "center": [
+                                                                  "60%",
+                                                                  "50%"
+                                                            ],
+                                                            "itemStyle": {
+                                                                  "borderRadius": 3
+                                                            }
+                                                      }
+                                                ]
+                                          }
+                                    },
+                                    {
+                                          "name": "柱状图",
+                                          "type": "bar",
+                                          "props": {
+                                                "height": 240,
+                                                "x_key": "name",
+                                                "axisLabel": {
+                                                      "interval": 0,
+                                                      "textStyle": {
+                                                            "fontSize": 10
+                                                      }
+                                                },
+                                                "series": [
+                                                      {
+                                                            "name": "rate",
+                                                            "type": "bar",
+                                                            "colorBy": "data",
+                                                            "itemStyle": {
+                                                                  "borderRadius": 3
+                                                            },
+                                                            "splitLine": {
+                                                                  "show": false
+                                                            },
+                                                            "axisLabel": {
+                                                                  "show": false
+                                                            }
+                                                      }
+                                                ]
+                                          }
+                                    }
+                              ]
+                        },
+                        {
+                              "name": "云厂商积分",
+                              "width": 12,
+                              "type": "line",
+                              "props": {
+                                    "height": 240,
+                                    "x_key": "name",
+                                    "axisLabel": {
+                                          "interval": 0,
+                                          "rotate": 0,
+                                          "textStyle": {
+                                                "fontSize": 12
+                                          }
+                                    },
+                                    "series": [
+                                          {
+                                                "name": "score",
+                                                "type": "line",
+                                                "smooth": true,
+                                                "symbolSize": 8,
+                                                "areaStyle": {},
+                                                "splitLine": {
+                                                      "show": false
+                                                },
+                                                "axisLabel": {
+                                                      "show": false
+                                                },
+                                                "color": "#7bf9af"
+                                          }
+                                    ]
+                              }
+                        },
+                        {
+                              "name": "云厂商概览",
+                              "width": 12,
+                              "type": "table",
+                              "props": {
+                                    "height": 240,
+                                    "columns": [
+                                          {
+                                                "title": "名称",
+                                                "dataIndex": "name"
+                                          },
+                                          {
+                                                "title": "使用率",
+                                                "dataIndex": "usage"
+                                          },
+                                          {
+                                                "title": "积分",
+                                                "dataIndex": "score"
+                                          },
+                                          {
+                                                "title": "市场占有率",
+                                                "dataIndex": "rate"
+                                          }
+                                    ]
+                              }
+                        },
+                        {
+                              "name": "云厂商概览",
+                              "width": 24,
+                              "type": "lineBar",
+                              "props": {
+                                    "height": 240,
+                                    "x_key": "name",
+                                    "axisLabel": {
+                                          "interval": 0,
+                                          "textStyle": {
+                                                "fontSize": 12
+                                          }
+                                    },
+                                    "series": [
+                                          {
+                                                "name": "score",
+                                                "type": "bar",
+                                                "itemStyle": {
+                                                      "borderRadius": 6
+                                                },
+                                                "splitLine": {
+                                                      "show": false
+                                                },
+                                                "axisLabel": {
+                                                      "show": false
+                                                }
+                                          },
+                                          {
+                                                "name": "usage",
+                                                "type": "line",
+                                                "smooth": true,
+                                                "symbolSize": 8,
+                                                "itemStyle": {
+                                                      "borderRadius": 6
+                                                },
+                                                "splitLine": {
+                                                      "show": false
+                                                },
+                                                "axisLabel": {
+                                                      "show": false
+                                                }
+                                          },
+                                          {
+                                                "name": "rate",
+                                                "type": "line",
+                                                "smooth": true,
+                                                "symbolSize": 8,
+                                                "itemStyle": {
+                                                      "borderRadius": 6
+                                                },
+                                                "splitLine": {
+                                                      "show": false
+                                                },
+                                                "axisLabel": {
+                                                      "show": false
+                                                }
+                                          }
+                                    ]
+                              }
                         }
                   ]
             },
