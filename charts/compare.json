@@ -1,0 +1,82 @@
+{
+      "label": "指标对比",
+      "version": "1.0.0",
+      "description": "指标对比用于测试",
+      "nodes": [
+            {
+                  "name": "行业",
+                  "engine": "xiang",
+                  "query": {
+                        "debug": true,
+                        "select": [
+                              "name",
+                              "city",
+                              "score",
+                              "usage",
+                              "industries[*](string 50) as industry"
+                        ],
+                        "from": "$service",
+                        "orders": "score asc",
+                        "limit": 100,
+                        "groups": "industry,city"
+                  }
+            }
+      ],
+      "output": {
+            "data": "{{$res.行业}}",
+            "query": "{{$in}}"
+      },
+      "apis": {
+            "data": {
+                  "disable": false,
+                  "guard": "-",
+                  "default": [
+                        {
+                              "from": "1980-01-02",
+                              "to": "2050-12-31"
+                        }
+                  ]
+            },
+            "setting": {
+                  "disable": false,
+                  "guard": "-"
+            }
+      },
+      "filters": {
+            "时间区间": {
+                  "label": "时间区间",
+                  "bind": "range",
+                  "input": {
+                        "type": "rangePicker",
+                        "props": {
+                              "placeholder": [
+                                    "开始时间",
+                                    "结束时间"
+                              ]
+                        }
+                  }
+            }
+      },
+      "page": {
+            "primary": "城市",
+            "layout": {
+                  "filters": [
+                        {
+                              "name": "时间区间",
+                              "width": 6
+                        }
+                  ],
+                  "charts": [
+                        {
+                              "type": "line",
+                              "props": {}
+                        },
+                        {
+                              "type": "bar",
+                              "props": {}
+                        }
+                  ]
+            },
+            "actions": {}
+      }
+}
