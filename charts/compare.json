@@ -9,6 +9,7 @@
                   "query": {
                         "debug": true,
                         "select": [
+                              "id",
                               "name",
                               "rate"
                         ],
@@ -35,6 +36,7 @@
                   "query": {
                         "debug": true,
                         "select": [
+                              "id",
                               "name",
                               "usage"
                         ],
@@ -113,6 +115,24 @@
                               "name": "云厂商使用率",
                               "width": 12,
                               "type": "bar",
+                              "table": true,
+                              "table_props": {
+                                    "height": 240,
+                                    "columns": [
+                                          {
+                                                "title": "ID",
+                                                "dataIndex": "id"
+                                          },
+                                          {
+                                                "title": "名称",
+                                                "dataIndex": "name"
+                                          },
+                                          {
+                                                "title": "使用率",
+                                                "dataIndex": "usage"
+                                          }
+                                    ]
+                              },
                               "props": {
                                     "height": 240,
                                     "x_key": "name",
@@ -144,6 +164,24 @@
                               "name": "云厂商市占率",
                               "width": 12,
                               "type": "pie",
+                              "table": true,
+                              "table_props": {
+                                    "height": 240,
+                                    "columns": [
+                                          {
+                                                "title": "ID",
+                                                "dataIndex": "id"
+                                          },
+                                          {
+                                                "title": "名称",
+                                                "dataIndex": "name"
+                                          },
+                                          {
+                                                "title": "市占率",
+                                                "dataIndex": "rate"
+                                          }
+                                    ]
+                              },
                               "charts": [
                                     {
                                           "name": "玫瑰图",
