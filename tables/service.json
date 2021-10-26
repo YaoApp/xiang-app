@@ -518,15 +518,15 @@
                   "filters": [
                         {
                               "name": "关键词",
-                              "width": 4
+                              "width": 5
                         },
                         {
                               "name": "所属厂商",
-                              "width": 4
+                              "width": 5
                         },
                         {
                               "name": "服务类型",
-                              "width": 4
+                              "width": 5
                         }
                   ]
             },
