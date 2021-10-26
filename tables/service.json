@@ -536,10 +536,8 @@
             },
             "actions": {
                   "create": {
-                        "type": "button",
                         "props": {
-                              "label": "新建服务",
-                              "icon": "fas fa-plus"
+                              "label": "新建服务"
                         }
                   },
                   "view": {},
@@ -552,7 +550,11 @@
                   "deleteWhere": {},
                   "updateSelect": {},
                   "deleteSelect": {},
-                  "pagination": {},
+                  "pagination": {
+                        "props": {
+                              "showTotal": true
+                        }
+                  },
                   "setting": {}
             },
             "option": {
