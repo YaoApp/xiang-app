@@ -133,9 +133,10 @@
                         }
                   },
                   "edit": {
-                        "type": "input",
+                        "type": "textArea",
                         "props": {
-                              "value": ":name"
+                              "value": ":name",
+                              "rows": 3
                         }
                   }
             },
@@ -598,7 +599,7 @@
                                     },
                                     {
                                           "name": "服务名称",
-                                          "width": 12,
+                                          "width": 24,
                                           "rules": [
                                                 {
                                                       "required": true,
