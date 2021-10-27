@@ -94,7 +94,7 @@
       "values": [
             {
                   "name": "数据看板",
-                  "path": "/kanban",
+                  "path": "/kanban/kanban",
                   "icon": "icon-activity",
                   "rank": 1,
                   "status": "enabled",
@@ -116,18 +116,20 @@
                   "icon": "icon-cloud",
                   "rank": 3,
                   "status": "enabled",
-                  "visible_menu": 0,
+                  "visible_menu": 1,
                   "blocks": 0,
                   "children": [
                         {
                               "name": "云服务库",
                               "path": "/table/service",
-                              "icon": "icon-list"
+                              "icon": "icon-list",
+                              "visible_menu": 1
                         },
                         {
                               "name": "创建云服务库",
                               "path": "/form/service/0",
-                              "icon": "icon-plus"
+                              "icon": "icon-plus",
+                              "visible_menu": 1
                         }
                   ]
             }
