@@ -403,7 +403,15 @@
                         "name": "label",
                         "props": {
                               "value": ":created_at",
-                              "datetime-format": "YYYY年MM月DD日 @hh:mm:ss"
+                              "format": "YYYY年MM月DD日 hh:mm:ss"
+                        }
+                  },
+                  "edit": {
+                        "type": "datePicker",
+                        "props": {
+                              "value": ":created_at",
+                              "showTime": true,
+                              "format": "YYYY年MM月DD日 hh:mm:ss"
                         }
                   }
             },
@@ -413,7 +421,7 @@
                         "name": "label",
                         "props": {
                               "value": ":update_at",
-                              "datetime-format": "YYYY年MM月DD日 @hh:mm:ss"
+                              "format": "YYYY年MM月DD日 hh:mm:ss"
                         }
                   }
             },
