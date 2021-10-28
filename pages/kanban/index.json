@@ -103,6 +103,9 @@
       },
       "page": {
             "primary": "城市",
+            "option": {
+                  "screen": "/screen/screen.index"
+            },
             "layout": {
                   "filters": [
                         {
@@ -136,6 +139,10 @@
                                                 },
                                                 "axisLabel": {
                                                       "show": false
+                                                },
+                                                "label": {
+                                                      "show": true,
+                                                      "position": "top"
                                                 }
                                           },
                                           {

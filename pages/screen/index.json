@@ -1,0 +1,389 @@
+{
+      "label": "数据大屏",
+      "version": "1.0.0",
+      "description": "指标对比用于测试",
+      "nodes": [
+            {
+                  "name": "云厂商市占率",
+                  "engine": "xiang",
+                  "query": {
+                        "debug": true,
+                        "select": [
+                              "id",
+                              "name",
+                              "rate"
+                        ],
+                        "from": "$service",
+                        "limit": 100
+                  }
+            },
+            {
+                  "name": "云厂商积分",
+                  "engine": "xiang",
+                  "query": {
+                        "debug": true,
+                        "select": [
+                              "name",
+                              "score"
+                        ],
+                        "from": "$service",
+                        "limit": 100
+                  }
+            },
+            {
+                  "name": "云厂商使用率",
+                  "engine": "xiang",
+                  "query": {
+                        "debug": true,
+                        "select": [
+                              "id",
+                              "name",
+                              "usage"
+                        ],
+                        "from": "$service",
+                        "limit": 100
+                  }
+            },
+            {
+                  "name": "云厂商概览",
+                  "engine": "xiang",
+                  "query": {
+                        "debug": true,
+                        "select": [
+                              "id",
+                              "name",
+                              "score",
+                              "usage",
+                              "rate"
+                        ],
+                        "from": "$service",
+                        "limit": 100
+                  }
+            }
+      ],
+      "output": {
+            "data": {
+                  "云厂商市占率": "{{$res.云厂商市占率}}",
+                  "云厂商积分": "{{$res.云厂商积分}}",
+                  "云厂商使用率": "{{$res.云厂商使用率}}",
+                  "云厂商概览": "{{$res.云厂商概览}}"
+            },
+            "query": "{{$in}}"
+      },
+      "apis": {
+            "data": {
+                  "disable": false,
+                  "guard": "-",
+                  "default": [
+                        {
+                              "from": "1980-01-02",
+                              "to": "2050-12-31"
+                        }
+                  ]
+            },
+            "setting": {
+                  "disable": false,
+                  "guard": "-"
+            }
+      },
+      "filters": {
+            "时间区间": {
+                  "label": "时间区间",
+                  "bind": "range",
+                  "input": {
+                        "type": "rangePicker",
+                        "props": {
+                              "placeholder": [
+                                    "开始时间",
+                                    "结束时间"
+                              ]
+                        }
+                  }
+            }
+      },
+      "page": {
+            "primary": "城市",
+            "layout": {
+                  "filters": [
+                        {
+                              "name": "时间区间",
+                              "width": 6
+                        }
+                  ],
+                  "charts": [
+                        {
+                              "name": "云厂商使用率",
+                              "width": 6,
+                              "height": 4,
+                              "type": "bar",
+                              "props": {
+                                    "x_key": "name",
+                                    "height": "100%",
+                                    "axisLabel": {
+                                          "interval": 0,
+                                          "rotate": 30,
+                                          "textStyle": {
+                                                "fontSize": 10
+                                          }
+                                    },
+                                    "series": [
+                                          {
+                                                "name": "usage",
+                                                "type": "bar",
+                                                "colorBy": "data",
+                                                "itemStyle": {
+                                                      "borderRadius": 6
+                                                },
+                                                "splitLine": {
+                                                      "show": false
+                                                },
+                                                "axisLabel": {
+                                                      "show": false
+                                                }
+                                          }
+                                    ]
+                              }
+                        },
+                        {
+                              "name": "云厂商积分",
+                              "width": 6,
+                              "height": 4,
+                              "type": "line",
+                              "props": {
+                                    "height": "100%",
+                                    "x_key": "name",
+                                    "axisLabel": {
+                                          "interval": 0,
+                                          "rotate": 30,
+                                          "textStyle": {
+                                                "fontSize": 12
+                                          }
+                                    },
+                                    "series": [
+                                          {
+                                                "name": "score",
+                                                "type": "line",
+                                                "smooth": true,
+                                                "symbolSize": 8,
+                                                "areaStyle": {},
+                                                "splitLine": {
+                                                      "show": false
+                                                },
+                                                "axisLabel": {
+                                                      "show": false
+                                                },
+                                                "color": "#7bf9af"
+                                          }
+                                    ]
+                              }
+                        },
+                        {
+                              "name": "云厂商积分",
+                              "width": 6,
+                              "height": 4,
+                              "type": "table",
+                              "props": {
+                                    "height": "100%",
+                                    "columns": [
+                                          {
+                                                "title": "名称",
+                                                "dataIndex": "name"
+                                          },
+                                          {
+                                                "title": "积分",
+                                                "dataIndex": "score"
+                                          }
+                                    ]
+                              }
+                        },
+                        {
+                              "name": "云厂商市占率",
+                              "width": 12,
+                              "height": 4,
+                              "type": "pie",
+                              "charts": [
+                                    {
+                                          "name": "玫瑰图",
+                                          "type": "pie",
+                                          "props": {
+                                                "height": "100%",
+                                                "x_key": "name",
+                                                "tooltip": {
+                                                      "textStyle": {
+                                                            "color": "#a2a5b9",
+                                                            "fontSize": 12
+                                                      },
+                                                      "backgroundColor": "#232326",
+                                                      "borderRadius": 6
+                                                },
+                                                "series": [
+                                                      {
+                                                            "name": "rate",
+                                                            "type": "pie",
+                                                            "roseType": "area",
+                                                            "radius": [
+                                                                  10,
+                                                                  100
+                                                            ],
+                                                            "center": [
+                                                                  "60%",
+                                                                  "50%"
+                                                            ],
+                                                            "itemStyle": {
+                                                                  "borderRadius": 3
+                                                            }
+                                                      }
+                                                ]
+                                          }
+                                    },
+                                    {
+                                          "name": "柱状图",
+                                          "type": "bar",
+                                          "props": {
+                                                "height": "100%",
+                                                "x_key": "name",
+                                                "axisLabel": {
+                                                      "interval": 0,
+                                                      "textStyle": {
+                                                            "fontSize": 10
+                                                      }
+                                                },
+                                                "series": [
+                                                      {
+                                                            "name": "rate",
+                                                            "type": "bar",
+                                                            "colorBy": "data",
+                                                            "itemStyle": {
+                                                                  "borderRadius": 3
+                                                            },
+                                                            "splitLine": {
+                                                                  "show": false
+                                                            },
+                                                            "axisLabel": {
+                                                                  "show": false
+                                                            }
+                                                      }
+                                                ]
+                                          }
+                                    }
+                              ]
+                        },
+                        {
+                              "name": "云厂商概览",
+                              "width": 12,
+                              "height": 8,
+                              "type": "map",
+                              "props": {
+                                    "series": [
+                                          {
+                                                "name": "score",
+                                                "type": "map",
+                                                "map": "china"
+                                          }
+                                    ]
+                              }
+                        },
+                        {
+                              "name": "云厂商使用率",
+                              "width": 6,
+                              "height": 4,
+                              "type": "bar",
+                              "props": {
+                                    "x_key": "name",
+                                    "height": "100%",
+                                    "axisLabel": {
+                                          "interval": 0,
+                                          "rotate": 30,
+                                          "textStyle": {
+                                                "fontSize": 10
+                                          }
+                                    },
+                                    "series": [
+                                          {
+                                                "name": "usage",
+                                                "type": "bar",
+                                                "colorBy": "data",
+                                                "itemStyle": {
+                                                      "borderRadius": 6
+                                                },
+                                                "splitLine": {
+                                                      "show": false
+                                                },
+                                                "axisLabel": {
+                                                      "show": false
+                                                }
+                                          }
+                                    ]
+                              }
+                        },
+                        {
+                              "name": "云厂商使用率",
+                              "width": 6,
+                              "height": 4,
+                              "type": "bar",
+                              "props": {
+                                    "x_key": "name",
+                                    "height": "100%",
+                                    "axisLabel": {
+                                          "interval": 0,
+                                          "rotate": 30,
+                                          "textStyle": {
+                                                "fontSize": 10
+                                          }
+                                    },
+                                    "series": [
+                                          {
+                                                "name": "usage",
+                                                "type": "bar",
+                                                "colorBy": "data",
+                                                "itemStyle": {
+                                                      "borderRadius": 6
+                                                },
+                                                "splitLine": {
+                                                      "show": false
+                                                },
+                                                "axisLabel": {
+                                                      "show": false
+                                                }
+                                          }
+                                    ]
+                              }
+                        },
+                        {
+                              "name": "云厂商使用率",
+                              "width": 6,
+                              "height": 4,
+                              "type": "bar",
+                              "props": {
+                                    "x_key": "name",
+                                    "height": "100%",
+                                    "axisLabel": {
+                                          "interval": 0,
+                                          "rotate": 30,
+                                          "textStyle": {
+                                                "fontSize": 10
+                                          }
+                                    },
+                                    "series": [
+                                          {
+                                                "name": "usage",
+                                                "type": "bar",
+                                                "colorBy": "data",
+                                                "itemStyle": {
+                                                      "borderRadius": 6
+                                                },
+                                                "splitLine": {
+                                                      "show": false
+                                                },
+                                                "axisLabel": {
+                                                      "show": false
+                                                }
+                                          }
+                                    ]
+                              }
+                        }
+                  ]
+            },
+            "actions": {}
+      }
+}
