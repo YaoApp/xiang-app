@@ -5,7 +5,7 @@
       "option": {
             "nav_user": "xiang.user",
             "nav_menu": "menu",
-            "index": "/kanban/index"
+            "index": "/kanban/kanban.index"
       },
       "storage": {
             "default": "oss",
