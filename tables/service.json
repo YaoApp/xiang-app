@@ -93,6 +93,23 @@
             }
       },
       "columns": {
+            "关联服务": {
+                  "label": "关联服务",
+                  "edit": {
+                        "type": "table",
+                        "props": {
+                              "setting": "/api/xiang/table/service/setting",
+                              "save": "/api/xiang/table/service/save",
+                              "data": {
+                                    "api": "/api/xiang/table/service/search",
+                                    "query": {
+                                          "id": "1",
+                                          "name": ":manu.name"
+                                    }
+                              }
+                        }
+                  }
+            },
             "服务信息": {
                   "label": "服务信息",
                   "view": {
@@ -502,7 +519,7 @@
                   "columns": [
                         {
                               "name": "服务信息",
-                              "width": 300
+                              "width": 240
                         },
                         {
                               "name": "所属厂商"
@@ -610,6 +627,10 @@
                                                       "message": "请输入营销图片"
                                                 }
                                           ]
+                                    },
+                                    {
+                                          "name": "关联服务",
+                                          "width": 24
                                     },
                                     {
                                           "name": "服务名称",
