@@ -1,0 +1,31 @@
+{
+  "name": "选项接口",
+  "version": "1.0.0",
+  "description": "选项接口",
+  "group": "select",
+  "guard": "-",
+  "paths": [
+    {
+      "path": "/search",
+      "method": "GET",
+      "guard": "-",
+      "process": "flows.select.user",
+      "in": ["$query.keyword"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "/mention",
+      "method": "GET",
+      "guard": "-",
+      "process": "flows.select.mention",
+      "in": ["$query.keyword"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    }
+  ]
+}
