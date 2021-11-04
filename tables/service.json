@@ -126,15 +126,6 @@
                               "width": 40,
                               "height": 40
                         }
-                  },
-                  "edit": {
-                        "type": "upload",
-                        "props": {
-                              "value": ":images",
-                              "filetype": "image",
-                              "multiple": true,
-                              "maxCount": 3
-                        }
                   }
             },
             "服务名称": {
