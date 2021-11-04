@@ -98,14 +98,10 @@
                   "edit": {
                         "type": "table",
                         "props": {
-                              "setting": "/api/xiang/table/service/setting",
-                              "save": "/api/xiang/table/service/save",
-                              "data": {
-                                    "api": "/api/xiang/table/service/search",
-                                    "query": {
-                                          "id": "1",
-                                          "name": ":manu.name"
-                                    }
+                              "name":"service",
+                              "query": {
+                                    "id": "1",
+                                    "name": ":manu.name"
                               }
                         }
                   }
