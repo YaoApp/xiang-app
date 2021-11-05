@@ -1,0 +1,12 @@
+{
+      "label": "最新信息",
+      "version": "1.0.0",
+      "description": "最新信息",
+      "nodes": [
+            {
+                  "name": "data",
+                  "script": "input"
+            }
+      ],
+      "output": "{{$res.data}}"
+}

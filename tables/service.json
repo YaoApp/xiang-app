@@ -437,12 +437,12 @@
                   "label": "厂商",
                   "bind": "where.manu_id.in",
                   "input": {
-                        "type": "select",
+                        "type": "cascader",
                         "props": {
                               "showSearch": true,
                               "placeholder": "请选择所属厂商",
                               "remote": {
-                                    "api": "/api/manu/get",
+                                    "api": "/api/cascader/search",
                                     "query": {
                                           "select": [
                                                 "id",

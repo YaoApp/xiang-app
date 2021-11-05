@@ -1,0 +1,19 @@
+{
+      "name": "选项接口",
+      "version": "1.0.0",
+      "description": "选项接口",
+      "group": "cascader",
+      "guard": "-",
+      "paths": [
+            {
+                  "path": "/search",
+                  "method": "GET",
+                  "guard": "-",
+                  "process": "flows.cascader.index",
+                  "out": {
+                        "status": 200,
+                        "type": "application/json"
+                  }
+            }
+      ]
+}
