@@ -113,6 +113,27 @@
                         }
                   }
             },
+            "树形选择框展示": {
+                  "label": "树形选择框展示",
+                  "edit": {
+                        "type": "treeSelect",
+                        "props": {
+                              "value": ":treeSelect",
+                              "allowClear": true,
+                              "multiple": true,
+                              "remote": {
+                                    "api": "/api/tree/search",
+                                    "query": {
+                                          "select": [
+                                                "id",
+                                                "name"
+                                          ],
+                                          "keyword": "where_name_like"
+                                    }
+                              }
+                        }
+                  }
+            },
             "关联服务": {
                   "label": "关联服务",
                   "edit": {
@@ -700,7 +721,11 @@
                                     },
                                     {
                                           "name": "树形组件展示",
-                                          "width": 24
+                                          "width": 12
+                                    },
+                                    {
+                                          "name": "树形选择框展示",
+                                          "width": 12
                                     }
                               ]
                         }
