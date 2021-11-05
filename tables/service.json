@@ -93,6 +93,26 @@
             }
       },
       "columns": {
+            "树形组件展示": {
+                  "label": "树形组件展示",
+                  "edit": {
+                        "type": "tree",
+                        "props": {
+                              "value": ":tree",
+                              "checkable": true,
+                              "remote": {
+                                    "api": "/api/tree/search",
+                                    "query": {
+                                          "select": [
+                                                "id",
+                                                "name"
+                                          ],
+                                          "keyword": "where_name_like"
+                                    }
+                              }
+                        }
+                  }
+            },
             "关联服务": {
                   "label": "关联服务",
                   "edit": {
@@ -294,11 +314,38 @@
             "计费方式": {
                   "label": "计费方式",
                   "view": {
-                        "type": "a",
+                        "name": "tags",
+                        "props": {
+                              "value": ":price_options"
+                        }
+                  },
+                  "edit": {
+                        "type": "select",
                         "props": {
                               "value": ":price_options",
-                              "href": "https://baidu.com",
-                              "target": "_blank"
+                              "mode": "multiple",
+                              "options": [
+                                    {
+                                          "label": "按年订阅",
+                                          "value": "按年订阅"
+                                    },
+                                    {
+                                          "label": "按月订阅",
+                                          "value": "按月订阅"
+                                    },
+                                    {
+                                          "label": "按量计费",
+                                          "value": "按量计费"
+                                    },
+                                    {
+                                          "label": "私有化部署",
+                                          "value": "私有化部署"
+                                    },
+                                    {
+                                          "label": "其他",
+                                          "value": "其他"
+                                    }
+                              ]
                         }
                   }
             },
@@ -649,6 +696,10 @@
                                     },
                                     {
                                           "name": "行业覆盖",
+                                          "width": 24
+                                    },
+                                    {
+                                          "name": "树形组件展示",
                                           "width": 24
                                     }
                               ]
