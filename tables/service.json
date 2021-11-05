@@ -98,7 +98,7 @@
                   "edit": {
                         "type": "table",
                         "props": {
-                              "name":"service",
+                              "name": "service",
                               "query": {
                                     "id": "1",
                                     "name": ":manu.name"
@@ -125,6 +125,15 @@
                               "value": ":images",
                               "width": 40,
                               "height": 40
+                        }
+                  },
+                  "edit": {
+                        "type": "upload",
+                        "props": {
+                              "value": ":images",
+                              "filetype": "image",
+                              "multiple": true,
+                              "maxCount": 1
                         }
                   }
             },
@@ -486,15 +495,9 @@
                         "props": {
                               "showSearch": true,
                               "placeholder": "请选择所属类型",
-                              "remote": {
-                                    "api": "/api/kind/get",
-                                    "query": {
-                                          "select": [
-                                                "id",
-                                                "name"
-                                          ],
-                                          "keyword": "where_name_like"
-                                    }
+                              "search": {
+                                    "api": "/api/select/search",
+                                    "key":"keyword"
                               }
                         }
                   }
