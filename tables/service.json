@@ -668,16 +668,6 @@
                                           ]
                                     },
                                     {
-                                          "name": "所属厂商",
-                                          "width": 12,
-                                          "rules": [
-                                                {
-                                                      "required": true,
-                                                      "message": "请选择所属厂商"
-                                                }
-                                          ]
-                                    },
-                                    {
                                           "name": "服务类型",
                                           "width": 12,
                                           "rules": [
