@@ -229,7 +229,7 @@
                                                 },
                                                 "series": [
                                                       {
-                                                            "name": "rate",
+                                                            "name": "usage",
                                                             "type": "bar",
                                                             "colorBy": "data",
                                                             "itemStyle": {
@@ -253,6 +253,7 @@
                               "type": "table",
                               "props": {
                                     "height": 240,
+                                    "autoplay": true,
                                     "columns": [
                                           {
                                                 "title": "ID",
