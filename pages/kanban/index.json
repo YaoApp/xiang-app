@@ -104,6 +104,7 @@
       "page": {
             "primary": "城市",
             "option": {
+                  "request_interval": 10,
                   "screen": "/screen/screen.index"
             },
             "layout": {
