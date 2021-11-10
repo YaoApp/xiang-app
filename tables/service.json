@@ -217,27 +217,10 @@
             "服务类型": {
                   "label": "服务类型",
                   "view": {
-                        "name": "label",
+                        "type": "tooltip",
                         "props": {
-                              "value": ":kind.name"
-                        }
-                  },
-                  "edit": {
-                        "type": "select",
-                        "props": {
-                              "bind": "kind.id",
-                              "value": ":kind_id",
-                              "showSearch": true,
-                              "remote": {
-                                    "api": "/api/kind/get",
-                                    "query": {
-                                          "select": [
-                                                "id",
-                                                "name"
-                                          ],
-                                          "keyword": "where_name_like"
-                                    }
-                              }
+                              "value": ":kind.name",
+                              "title": ":kind.id"
                         }
                   }
             },
