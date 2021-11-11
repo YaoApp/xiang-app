@@ -66,7 +66,11 @@
                   "云厂商市占率": "{{$res.云厂商市占率}}",
                   "云厂商积分": "{{$res.云厂商积分}}",
                   "云厂商使用率": "{{$res.云厂商使用率}}",
-                  "云厂商概览": "{{$res.云厂商概览}}"
+                  "云厂商概览": "{{$res.云厂商概览}}",
+                  "云计算行业总产值": "45000",
+                  "云计算相关企业": "8530",
+                  "持牌企业": "15",
+                  "中国云计算份额": "45"
             },
             "query": "{{$in}}"
       },
@@ -109,6 +113,42 @@
             },
             "layout": {
                   "charts": [
+                        {
+                              "name": "云计算行业总产值",
+                              "width": 6,
+                              "type": "numberCard",
+                              "props": {
+                                    "icon": "euro-outline",
+                                    "unit": "亿"
+                              }
+                        },
+                        {
+                              "name": "云计算相关企业",
+                              "width": 6,
+                              "type": "numberCard",
+                              "props": {
+                                    "icon": "cloud-outline",
+                                    "unit": "家"
+                              }
+                        },
+                        {
+                              "name": "持牌企业",
+                              "width": 6,
+                              "type": "numberCard",
+                              "props": {
+                                    "icon": "business-outline",
+                                    "unit": "家"
+                              }
+                        },
+                        {
+                              "name": "中国云计算份额",
+                              "width": 6,
+                              "type": "numberCard",
+                              "props": {
+                                    "icon": "pie-chart-outline",
+                                    "unit": "%"
+                              }
+                        },
                         {
                               "name": "云厂商概览",
                               "width": 24,
