@@ -633,7 +633,7 @@
                               }
                         ]
                   },
-                  "options": {
+                  "operation": {
                         "hideDefault": false,
                         "unfold": false,
                         "width": 180,
