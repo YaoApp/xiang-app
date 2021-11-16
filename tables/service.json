@@ -635,8 +635,8 @@
                   },
                   "operation": {
                         "hideDefault": false,
-                        "unfold": false,
-                        "width": 180,
+                        "unfold": true,
+                        "width": 220,
                         "items": [
                               {
                                     "title": "上架",
@@ -672,9 +672,6 @@
       },
       "edit": {
             "primary": "id",
-            "option": {
-                  "dev": true
-            },
             "layout": {
                   "fieldset": [
                         {
@@ -773,6 +770,59 @@
                               "label": "删除"
                         }
                   }
+            },
+            "option": {
+                  "dev": false,
+                  "operation": [
+                        {
+                              "title": "上架",
+                              "icon": "icon-arrow-up",
+                              "confirm": true,
+                              "disabled": ":id",
+                              "api": "/api/xiang/table/service/on",
+                              "data": {
+                                    "id": ":id"
+                              }
+                        },
+                        {
+                              "title": "下架",
+                              "icon": "icon-arrow-down",
+                              "api": "/api/xiang/table/service/save",
+                              "data": {
+                                    "id": ":id"
+                              }
+                        },
+                        {
+                              "title": "通过审核",
+                              "icon": "icon-check",
+                              "type": "success",
+                              "confirm": true,
+                              "api": "/api/xiang/table/service/on",
+                              "data": {
+                                    "id": ":id"
+                              }
+                        },
+                        {
+                              "title": "驳回",
+                              "icon": "icon-x-octagon",
+                              "type": "warning",
+                              "confirm": true,
+                              "api": "/api/xiang/table/service/on",
+                              "data": {
+                                    "id": ":id"
+                              }
+                        },
+                        {
+                              "title": "删除",
+                              "icon": "icon-trash-2",
+                              "type": "danger",
+                              "confirm": true,
+                              "api": "/api/xiang/table/service/del",
+                              "data": {
+                                    "id": ":id"
+                              }
+                        }
+                  ]
             }
       },
       "insert": {},
