@@ -632,6 +632,41 @@
                                     "width": 24
                               }
                         ]
+                  },
+                  "options": {
+                        "hideDefault": false,
+                        "unfold": false,
+                        "width": 180,
+                        "items": [
+                              {
+                                    "title": "上架",
+                                    "icon": "icon-arrow-up",
+                                    "confirm": true,
+                                    "disabled": ":id",
+                                    "api": "/api/xiang/table/service/on",
+                                    "data": {
+                                          "id": ":id"
+                                    }
+                              },
+                              {
+                                    "title": "下架",
+                                    "icon": "icon-arrow-down",
+                                    "api": "/api/xiang/table/service/save",
+                                    "data": {
+                                          "id": ":id"
+                                    }
+                              },
+                              {
+                                    "title": "删除",
+                                    "icon": "icon-trash-2",
+                                    "confirm": true,
+                                    "danger": true,
+                                    "api": "/api/xiang/table/service/del",
+                                    "data": {
+                                          "id": ":id"
+                                    }
+                              }
+                        ]
                   }
             }
       },
