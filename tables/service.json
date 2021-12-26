@@ -235,7 +235,7 @@
                                                 "id",
                                                 "name"
                                           ],
-                                          "keyword": "where_name_like"
+                                          "useValue": true
                                     }
                               }
                         }
@@ -634,7 +634,8 @@
                         ]
                   },
                   "operation": {
-                        "hideDefault": false,
+                        "hideView": false,
+                        "hideEdit": false,
                         "unfold": true,
                         "width": 220,
                         "items": [
@@ -818,6 +819,14 @@
                               "type": "danger",
                               "confirm": true,
                               "api": "/api/xiang/table/service/del",
+                              "data": {
+                                    "id": ":id"
+                              }
+                        },
+                        {
+                              "title": "跳转",
+                              "icon": "icon-link-2",
+                              "link": "https://baidu.com",
                               "data": {
                                     "id": ":id"
                               }
