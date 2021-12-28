@@ -1,0 +1,23 @@
+{
+      "name": "选项接口",
+      "version": "1.0.0",
+      "description": "选项接口",
+      "group": "test",
+      "guard": "-",
+      "paths": [
+            {
+                  "path": "/insert",
+                  "method": "POST",
+                  "guard": "-",
+                  "process": "models.test.insert",
+                  "in": [
+                        "$payload.columns",
+                        "$payload.data"
+                  ],
+                  "out": {
+                        "status": 200,
+                        "type": "application/json"
+                  }
+            }
+      ]
+}

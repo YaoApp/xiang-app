@@ -93,6 +93,56 @@
             }
       },
       "columns": {
+            "快捷表格": {
+                  "label": "快捷表格",
+                  "edit": {
+                        "type": "quickTable",
+                        "props": {
+                              "name": "test",
+                              "query": {
+                                    "id":":id"
+                              }
+                        }
+                  }
+            },
+            "联动图表": {
+                  "label": "联动图表",
+                  "edit": {
+                        "chart": true,
+                        "relation": "test",
+                        "type": "pie",
+                        "props": {
+                              "height": 240,
+                              "x_key": "name",
+                              "tooltip": {
+                                    "textStyle": {
+                                          "color": "#a2a5b9",
+                                          "fontSize": 12
+                                    },
+                                    "backgroundColor": "#232326",
+                                    "borderRadius": 6
+                              },
+                              "series": [
+                                    {
+                                          "name": "weight",
+                                          "type": "pie",
+                                          "roseType": "area",
+                                          "radius": [
+                                                10,
+                                                100
+                                          ],
+                                          "center": [
+                                                "60%",
+                                                "50%"
+                                          ],
+                                          "itemStyle": {
+                                                "borderRadius": 3
+                                          }
+                                    }
+                              ]
+                        }
+                  }
+            },
             "树形组件展示": {
                   "label": "树形组件展示",
                   "edit": {
@@ -752,6 +802,10 @@
                                     {
                                           "name": "树形选择框展示",
                                           "width": 12
+                                    },
+                                    {
+                                          "name": "快捷表格",
+                                          "width": 14
                                     }
                               ]
                         }

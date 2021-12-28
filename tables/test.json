@@ -1,0 +1,90 @@
+{
+      "name": "测试",
+      "version": "1.0.0",
+      "decription": "测试",
+      "bind": {
+            "model": "test"
+      },
+      "apis": {
+            "search": {
+                  "process": "models.test.Paginate",
+                  "guard": "-",
+                  "default": [
+                        {},
+                        null,
+                        99
+                  ]
+            }
+      },
+      "columns": {
+            "名称": {
+                  "label": "名称",
+                  "edit": {
+                        "type": "select",
+                        "props": {
+                              "value": ":name",
+                              "options": [
+                                    {
+                                          "label": "猪大排",
+                                          "value": "猪大排"
+                                    },
+                                    {
+                                          "label": "梅菜",
+                                          "value": "梅菜"
+                                    },
+                                    {
+                                          "label": "羊肉",
+                                          "value": "羊肉"
+                                    }
+                              ]
+                        }
+                  }
+            },
+            "量": {
+                  "label": "量",
+                  "edit": {
+                        "type": "input",
+                        "props": {
+                              "value": ":weight"
+                        }
+                  }
+            },
+            "单位": {
+                  "label": "单位",
+                  "edit": {
+                        "type": "select",
+                        "props": {
+                              "value": ":unit",
+                              "options": [
+                                    {
+                                          "label": "克",
+                                          "value": "克"
+                                    },
+                                    {
+                                          "label": "毫升",
+                                          "value": "毫升"
+                                    }
+                              ]
+                        }
+                  }
+            }
+      },
+      "list": {
+            "primary": "id",
+            "layout": {
+                  "columns": [
+                        {
+                              "name": "名称"
+                        },
+                        {
+                              "name": "量",
+                              "width": 120
+                        },
+                        {
+                              "name": "单位",
+                              "width": 100
+                        }
+                  ]
+            }
+      }
+}

@@ -1,0 +1,69 @@
+{
+      "name": "测试对象",
+      "table": {
+            "name": "test",
+            "comment": "测试对象表",
+            "engine": "InnoDB"
+      },
+      "columns": [
+            {
+                  "name": "id",
+                  "type": "ID"
+            },
+            {
+                  "name": "name",
+                  "type": "string",
+                  "comment": "名称",
+                  "index": true
+            },
+            {
+                  "name": "weight",
+                  "type": "integer",
+                  "comment": "量",
+                  "length": 128,
+                  "default": 0,
+                  "nullable": true
+            },
+            {
+                  "name": "unit",
+                  "type": "enum",
+                  "comment": "量",
+                  "option": [
+                        "克",
+                        "毫升"
+                  ]
+            }
+      ],
+      "relations": {},
+      "option": {
+            "timestamps": true,
+            "soft_deletes": true
+      },
+      "values": [
+            {
+                  "name": "猪肉",
+                  "weight": 500,
+                  "unit": "克"
+            },
+            {
+                  "name": "梅菜",
+                  "weight": 100,
+                  "unit": "克"
+            },
+            {
+                  "name": "淀粉",
+                  "weight": 100,
+                  "unit": "克"
+            },
+            {
+                  "name": "水",
+                  "weight": 500,
+                  "unit": "毫升"
+            },
+            {
+                  "name": "老抽",
+                  "weight": 20,
+                  "unit": "毫升"
+            }
+      ]
+}
