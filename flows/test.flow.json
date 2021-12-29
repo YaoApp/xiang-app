@@ -1,0 +1,25 @@
+{
+      "label": "测试",
+      "version": "1.0.0",
+      "description": "测试",
+      "engine": "xiang",
+      "nodes": [
+            {
+                  "name": "Flow脚本",
+                  "engine": "xiang",
+                  "query": {
+                        "from": "$test",
+                        "select": [
+                              "id",
+                              "name",
+                              "weight",
+                              "unit"
+                        ]
+                  }
+            }
+      ],
+      "output": {
+            "data": "{{$res.Flow脚本}}",
+            "page": 1
+      }
+}
