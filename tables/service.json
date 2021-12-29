@@ -100,7 +100,42 @@
                         "props": {
                               "name": "test",
                               "query": {
-                                    "id":":id"
+                                    "sort": "$index"
+                              },
+                              "chart": {
+                                    "position": "bottom",
+                                    "type": "pie",
+                                    "width": 480,
+                                    "props": {
+                                          "height": 240,
+                                          "x_key": "name",
+                                          "tooltip": {
+                                                "textStyle": {
+                                                      "color": "#a2a5b9",
+                                                      "fontSize": 12
+                                                },
+                                                "backgroundColor": "#232326",
+                                                "borderRadius": 6
+                                          },
+                                          "series": [
+                                                {
+                                                      "name": "weight",
+                                                      "type": "pie",
+                                                      "roseType": "area",
+                                                      "radius": [
+                                                            10,
+                                                            100
+                                                      ],
+                                                      "center": [
+                                                            "60%",
+                                                            "50%"
+                                                      ],
+                                                      "itemStyle": {
+                                                            "borderRadius": 3
+                                                      }
+                                                }
+                                          ]
+                                    }
                               }
                         }
                   }
@@ -805,7 +840,7 @@
                                     },
                                     {
                                           "name": "快捷表格",
-                                          "width": 14
+                                          "width": 24
                                     }
                               ]
                         }

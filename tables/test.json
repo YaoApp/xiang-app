@@ -76,15 +76,16 @@
             "layout": {
                   "columns": [
                         {
-                              "name": "名称"
+                              "name": "名称",
+                              "width": 12
                         },
                         {
                               "name": "量",
-                              "width": 120
+                              "width": 8
                         },
                         {
                               "name": "单位",
-                              "width": 100
+                              "width": 4
                         }
                   ]
             }

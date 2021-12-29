@@ -32,6 +32,12 @@
                         "克",
                         "毫升"
                   ]
+            },
+            {
+                  "name": "sort",
+                  "type": "integer",
+                  "comment": "排序字段",
+                  "length": 128
             }
       ],
       "relations": {},
@@ -43,27 +49,32 @@
             {
                   "name": "猪肉",
                   "weight": 500,
-                  "unit": "克"
+                  "unit": "克",
+                  "sort": 1
             },
             {
                   "name": "梅菜",
                   "weight": 100,
-                  "unit": "克"
+                  "unit": "克",
+                  "sort": 2
             },
             {
                   "name": "淀粉",
                   "weight": 100,
-                  "unit": "克"
+                  "unit": "克",
+                  "sort": 3
             },
             {
                   "name": "水",
                   "weight": 500,
-                  "unit": "毫升"
+                  "unit": "毫升",
+                  "sort": 4
             },
             {
                   "name": "老抽",
                   "weight": 20,
-                  "unit": "毫升"
+                  "unit": "毫升",
+                  "sort": 5
             }
       ]
 }
