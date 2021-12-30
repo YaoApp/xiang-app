@@ -109,7 +109,7 @@
             "primary": "城市",
             "option": {
                   "request_interval": 10,
-                  "screen": "/screen/screen.index"
+                  "screen": "/screen/test.html"
             },
             "layout": {
                   "charts": [
