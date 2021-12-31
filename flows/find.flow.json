@@ -16,7 +16,7 @@
     {
       "name": "服务列表",
       "process": "models.service.Get",
-      "args": [{ "withs": { "manu": {}, "kind": {} }, "limit": 1 }],
+      "args": [{ "withs": { "manu": {}, "kind": {} }, "limit": 10 }],
       "script": "data"
     }
   ],
