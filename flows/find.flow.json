@@ -20,5 +20,5 @@
       "script": "data"
     }
   ],
-  "output": "{{$res.服务}}"
+  "output": "{{$res.服务.0}}"
 }
