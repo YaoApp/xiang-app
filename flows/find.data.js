@@ -1,5 +1,5 @@
 function main(args, out, res) {
-  res.服务["service"] = out;
+  res.服务[0]["service"] = out;
 
-  return res.服务;
+  return res.服务[0];
 }

@@ -5,15 +5,20 @@
   "nodes": [
     {
       "name": "服务",
-      "process": "models.service.find",
-      "args": ["{{$in.0}}", { "withs": { "manu": {}, "kind": {} } }]
+      "process": "models.service.Get",
+      "args": [
+        {
+          "withs": { "manu": {}, "kind": {} },
+          "wheres": [{ "column": "id", "value": "{{$in.0}}" }]
+        }
+      ]
     },
     {
       "name": "服务列表",
-      "process": "models.service.get",
-      "args": [{ "withs": { "manu": {}, "kind": {} }, "limit": 10 }],
+      "process": "models.service.Get",
+      "args": [{ "withs": { "manu": {}, "kind": {} }, "limit": 1 }],
       "script": "data"
     }
   ],
-  "output": "{{$res.服务列表}}"
+  "output": "{{$res.服务}}"
 }
