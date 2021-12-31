@@ -93,6 +93,15 @@
             }
       },
       "columns": {
+            "日程表（测试）": {
+                  "label": "日程表（测试）",
+                  "edit": {
+                        "type": "schedule",
+                        "props": {
+                              "value": ":name"
+                        }
+                  }
+            },
             "表格图表（测试）": {
                   "label": "表格图表（测试）",
                   "edit": {
@@ -803,8 +812,12 @@
                                           ]
                                     },
                                     {
+                                          "name": "日程表（测试）",
+                                          "width": 24
+                                    },
+                                    {
                                           "name": "营销图片",
-                                          "width": 12,
+                                          "width": 24,
                                           "rules": [
                                                 {
                                                       "required": true,
@@ -814,7 +827,7 @@
                                     },
                                     {
                                           "name": "表格图表（测试）",
-                                          "width": 12
+                                          "width": 24
                                     },
                                     {
                                           "name": "关联服务",
