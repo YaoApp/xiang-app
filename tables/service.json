@@ -99,11 +99,12 @@
                         "type": "quickTable",
                         "props": {
                               "name": "test",
+                              "update_form": true,
                               "query": {
                                     "sort": "$index"
                               },
                               "chart": {
-                                    "position": "bottom",
+                                    "position": "right",
                                     "type": "pie",
                                     "width": 480,
                                     "props": {
@@ -137,44 +138,6 @@
                                           ]
                                     }
                               }
-                        }
-                  }
-            },
-            "联动图表": {
-                  "label": "联动图表",
-                  "edit": {
-                        "chart": true,
-                        "relation": "test",
-                        "type": "pie",
-                        "props": {
-                              "height": 240,
-                              "x_key": "name",
-                              "tooltip": {
-                                    "textStyle": {
-                                          "color": "#a2a5b9",
-                                          "fontSize": 12
-                                    },
-                                    "backgroundColor": "#232326",
-                                    "borderRadius": 6
-                              },
-                              "series": [
-                                    {
-                                          "name": "weight",
-                                          "type": "pie",
-                                          "roseType": "area",
-                                          "radius": [
-                                                10,
-                                                100
-                                          ],
-                                          "center": [
-                                                "60%",
-                                                "50%"
-                                          ],
-                                          "itemStyle": {
-                                                "borderRadius": 3
-                                          }
-                                    }
-                              ]
                         }
                   }
             },
@@ -533,17 +496,10 @@
             "创建时间": {
                   "label": "创建时间",
                   "view": {
-                        "name": "label",
+                        "type": "chartModal",
                         "props": {
+                              "name": "compare",
                               "value": ":created_at",
-                              "format": "YYYY年MM月DD日 hh:mm:ss"
-                        }
-                  },
-                  "edit": {
-                        "type": "datePicker",
-                        "props": {
-                              "value": ":created_at",
-                              "showTime": true,
                               "format": "YYYY年MM月DD日 hh:mm:ss"
                         }
                   }
