@@ -93,6 +93,43 @@
             }
       },
       "columns": {
+            "表格图表（测试）": {
+                  "label": "表格图表（测试）",
+                  "edit": {
+                        "type": "chart",
+                        "props": {
+                              "type": "bar",
+                              "value": ":services",
+                              "hide_title": true,
+                              "chart_props": {
+                                    "height": 240,
+                                    "x_key": "name",
+                                    "axisLabel": {
+                                          "interval": 0,
+                                          "textStyle": {
+                                                "fontSize": 10
+                                          }
+                                    },
+                                    "series": [
+                                          {
+                                                "name": "usage",
+                                                "type": "bar",
+                                                "colorBy": "data",
+                                                "itemStyle": {
+                                                      "borderRadius": 6
+                                                },
+                                                "splitLine": {
+                                                      "show": false
+                                                },
+                                                "axisLabel": {
+                                                      "show": false
+                                                }
+                                          }
+                                    ]
+                              }
+                        }
+                  }
+            },
             "快捷表格": {
                   "label": "快捷表格",
                   "edit": {
@@ -767,13 +804,17 @@
                                     },
                                     {
                                           "name": "营销图片",
-                                          "width": 24,
+                                          "width": 12,
                                           "rules": [
                                                 {
                                                       "required": true,
                                                       "message": "请输入营销图片"
                                                 }
                                           ]
+                                    },
+                                    {
+                                          "name": "表格图表（测试）",
+                                          "width": 12
                                     },
                                     {
                                           "name": "关联服务",
