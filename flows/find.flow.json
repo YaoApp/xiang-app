@@ -1,0 +1,19 @@
+{
+  "label": "查找合并",
+  "version": "1.0.0",
+  "description": "最新信息",
+  "nodes": [
+    {
+      "name": "服务",
+      "process": "models.service.find",
+      "args": ["{{$in.0}}", { "withs": { "manu": {}, "kind": {} } }]
+    },
+    {
+      "name": "服务列表",
+      "process": "models.service.get",
+      "args": [{ "withs": { "manu": {}, "kind": {} }, "limit": 10 }],
+      "script": "data"
+    }
+  ],
+  "output": "{{$res.服务列表}}"
+}
