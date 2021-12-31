@@ -57,7 +57,7 @@
                   ]
             },
             "find": {
-                  "process": "models.service.Find",
+                  "process": "flows.find",
                   "guard": "-",
                   "default": [
                         null,
@@ -99,7 +99,7 @@
                         "type": "chart",
                         "props": {
                               "type": "bar",
-                              "value": ":services",
+                              "value": ":service",
                               "hide_title": true,
                               "chart_props": {
                                     "height": 240,
