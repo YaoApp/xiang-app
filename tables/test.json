@@ -23,20 +23,17 @@
                         "type": "select",
                         "props": {
                               "value": ":name",
-                              "options": [
-                                    {
-                                          "label": "猪大排",
-                                          "value": "猪大排"
-                                    },
-                                    {
-                                          "label": "梅菜",
-                                          "value": "梅菜"
-                                    },
-                                    {
-                                          "label": "羊肉",
-                                          "value": "羊肉"
+                              "showSearch": true,
+                              "remote": {
+                                    "api": "/api/kind/get",
+                                    "query": {
+                                          "select": [
+                                                "id",
+                                                "name"
+                                          ],
+                                          "useValue": true
                                     }
-                              ]
+                              }
                         }
                   }
             },
