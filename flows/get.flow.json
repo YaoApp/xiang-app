@@ -19,7 +19,7 @@
       "args": [
         {
           "withs": { "manu": {}, "kind": {} },
-          "limit": 1
+          "limit": 5
         }
       ]
     }
