@@ -144,7 +144,7 @@
                   "edit": {
                         "type": "quickTable",
                         "props": {
-                              "setting": "test",
+                              "name": "test",
                               "value": ":test",
                               "query": {
                                     "sort": "$index"
@@ -686,11 +686,23 @@
                         ]
                   },
                   "operation": {
-                        "hideView": false,
-                        "hideEdit": false,
+                        "hideView": true,
+                        "hideEdit": true,
                         "unfold": true,
                         "width": 220,
                         "items": [
+                              {
+                                    "useModal": true,
+                                    "type": "view",
+                                    "title": "查看-Modal",
+                                    "icon": "icon-eye"
+                              },
+                              {
+                                    "useModal": true,
+                                    "type": "Edit",
+                                    "title": "编辑-Modal",
+                                    "icon": "icon-edit-2"
+                              },
                               {
                                     "title": "上架",
                                     "icon": "icon-arrow-up",
