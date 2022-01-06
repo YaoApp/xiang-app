@@ -18,7 +18,13 @@
       "process": "models.service.Get",
       "args": [{ "withs": { "manu": {}, "kind": {} }, "limit": 10 }],
       "script": "data"
+    },
+    {
+      "name": "Test",
+      "process": "models.test.Get",
+      "script": "datatest",
+      "args": [{}]
     }
   ],
-  "output": "{{$res.服务.0}}"
+  "output": "{{$res.Test}}"
 }
