@@ -144,8 +144,8 @@
                   "edit": {
                         "type": "quickTable",
                         "props": {
-                              "name": "test",
-                              "update_form": true,
+                              "setting": "test",
+                              "value": ":test",
                               "query": {
                                     "sort": "$index"
                               }
@@ -779,16 +779,6 @@
                                     {
                                           "name": "日程表（测试）",
                                           "width": 24
-                                    },
-                                    {
-                                          "name": "营销图片",
-                                          "width": 24,
-                                          "rules": [
-                                                {
-                                                      "required": true,
-                                                      "message": "请输入营销图片"
-                                                }
-                                          ]
                                     },
                                     {
                                           "name": "表格图表（测试）",
