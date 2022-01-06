@@ -1,0 +1,20 @@
+{
+  "name": "人脸识别",
+  "version": "1.0.0",
+  "description": "人脸识别API",
+  "group": "v1",
+  "guard": "-",
+  "paths": [
+    {
+      "path": "/stranger",
+      "method": "POST",
+      "guard": "-",
+      "process": "flows.face.login",
+      "in": [":payload"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    }
+  ]
+}

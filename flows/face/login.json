@@ -1,0 +1,12 @@
+{
+  "label": "人脸登录",
+  "version": "1.0.0",
+  "description": "最新信息",
+  "nodes": [
+    {
+      "name": "服务",
+      "process": "xiang.helper.Print",
+      "args": ["{{$in}}"]
+    }
+  ]
+}
