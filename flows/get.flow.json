@@ -1,0 +1,28 @@
+{
+  "label": "全部合并",
+  "version": "1.0.0",
+  "description": "最新信息",
+  "nodes": [
+    {
+      "name": "服务",
+      "process": "models.service.Get",
+      "args": [
+        {
+          "withs": { "manu": {}, "kind": {} }
+        }
+      ]
+    },
+    {
+      "name": "Test",
+      "process": "models.service.Get",
+      "script": "data",
+      "args": [
+        {
+          "withs": { "manu": {}, "kind": {} },
+          "limit": 1
+        }
+      ]
+    }
+  ],
+  "output": "{{$res.服务}}"
+}
