@@ -24,7 +24,53 @@
       "process": "models.test.Get",
       "script": "datatest",
       "args": [{}]
+    },
+    {
+      "name": "问卷",
+      "process": "xiang.helper.MapSet",
+      "args": [
+        "{{$res.Test}}",
+        "survey",
+        [
+          {
+            "name": "您平时有饮酒的习惯吗？",
+            "type": "单选",
+            "option": {},
+            "children": [
+              { "name": "有", "score": 0 },
+              { "name": "没有", "score": 20 }
+            ]
+          },
+          {
+            "name": "您最喜欢吃哪类食物?",
+            "type": "多选",
+            "option": {},
+            "children": [
+              { "name": "蔬菜", "score": 10 },
+              { "name": "肉", "score": 20 }
+            ]
+          },
+          {
+            "name": "您最后一次体检时间?",
+            "type": "时间",
+            "option": { "format": "YYYY-MM-DD hh:mm:ss" },
+            "children": []
+          },
+          {
+            "name": "您运动的频次?",
+            "type": "数字",
+            "option": { "min": 20, "max": 100 },
+            "children": []
+          },
+          {
+            "name": "您最爱吃的菜品?",
+            "type": "文本",
+            "option": { "minlength": 20, "maxlength": 100 },
+            "children": []
+          }
+        ]
+      ]
     }
   ],
-  "output": "{{$res.Test}}"
+  "output": "{{$res.问卷.survey}}"
 }

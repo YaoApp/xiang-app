@@ -1,0 +1,20 @@
+{
+  "name": "配置",
+  "version": "1.0.0",
+  "description": "配置API",
+  "group": "xiang/setting",
+  "guard": "-",
+  "paths": [
+    {
+      "path": "/test",
+      "method": "GET",
+      "guard": "-",
+      "process": "flows.settings.test",
+      "in": [":query"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    }
+  ]
+}
