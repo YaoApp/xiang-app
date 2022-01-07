@@ -1,0 +1,104 @@
+{
+      "label": "配置",
+      "version": "1.0.0",
+      "description": "配置",
+      "nodes": [],
+      "output": {
+            "columns": {
+                  "题目标题": {
+                        "label": "题目标题",
+                        "edit": {
+                              "type": "input",
+                              "props": {
+                                    "value": ":title"
+                              }
+                        }
+                  },
+                  "题目类型": {
+                        "label": "题目类型",
+                        "edit": {
+                              "type": "select",
+                              "props": {
+                                    "value": ":type",
+                                    "options": [
+                                          {
+                                                "label": "单选",
+                                                "value": "单选"
+                                          },
+                                          {
+                                                "label": "多选",
+                                                "value": "多选"
+                                          },
+                                          {
+                                                "label": "文字",
+                                                "value": "文字"
+                                          },
+                                          {
+                                                "label": "数字",
+                                                "value": "数字"
+                                          },
+                                          {
+                                                "label": "时间",
+                                                "value": "时间"
+                                          }
+                                    ]
+                              }
+                        }
+                  },
+                  "选择项": {
+                        "label": "选择项",
+                        "edit": {
+                              "type": "input",
+                              "props": {}
+                        }
+                  },
+                  "分数": {
+                        "label": "分数",
+                        "edit": {
+                              "type": "inputNumber",
+                              "props": {
+                                    "step": 10
+                              }
+                        }
+                  },
+                  "时间": {
+                        "label": "时间",
+                        "edit": {
+                              "type": "datePicker",
+                              "props": {}
+                        }
+                  },
+                  "频次": {
+                        "label": "频次",
+                        "edit": {
+                              "type": "inputNumber",
+                              "props": {
+                                    "step": 1
+                              }
+                        }
+                  },
+                  "姓名": {
+                        "label": "姓名",
+                        "edit": {
+                              "type": "input",
+                              "props": {}
+                        }
+                  }
+            },
+            "list": {
+                  "primary": "id",
+                  "layout": {
+                        "columns": [
+                              {
+                                    "name": "题目标题",
+                                    "width": 20
+                              },
+                              {
+                                    "name": "题目类型",
+                                    "width": 4
+                              }
+                        ]
+                  }
+            }
+      }
+}

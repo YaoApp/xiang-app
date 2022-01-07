@@ -152,6 +152,19 @@
                         }
                   }
             },
+            "调查问卷": {
+                  "label": "调查问卷",
+                  "edit": {
+                        "type": "quickTable",
+                        "props": {
+                              "setting": "survey",
+                              "value": ":survey",
+                              "query": {
+                                    "sort": "$index"
+                              }
+                        }
+                  }
+            },
             "树形组件展示": {
                   "label": "树形组件展示",
                   "edit": {
@@ -698,7 +711,7 @@
                                     "icon": "icon-eye"
                               },
                               {
-                                    "useModal": true,
+                                    "useModal": false,
                                     "type": "Edit",
                                     "title": "编辑-Modal",
                                     "icon": "icon-edit-2"
@@ -787,6 +800,10 @@
                                                       ]
                                                 }
                                           ]
+                                    },
+                                    {
+                                          "name": "调查问卷",
+                                          "width": 24
                                     },
                                     {
                                           "name": "日程表（测试）",

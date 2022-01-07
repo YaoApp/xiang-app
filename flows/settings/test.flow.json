@@ -1,10 +1,79 @@
 {
-  "label": "配置",
-  "version": "1.0.0",
-  "description": "配置",
-  "nodes": [],
-  "output": {
-    "配置项目": 1,
-    "配置项目2": 2
-  }
+      "label": "配置",
+      "version": "1.0.0",
+      "description": "配置",
+      "nodes": [],
+      "output": {
+            "columns": {
+                  "名称": {
+                        "label": "名称",
+                        "edit": {
+                              "type": "select",
+                              "props": {
+                                    "value": ":name",
+                                    "showSearch": true,
+                                    "remote": {
+                                          "api": "/api/kind/get",
+                                          "query": {
+                                                "select": [
+                                                      "id",
+                                                      "name"
+                                                ],
+                                                "useValue": true
+                                          }
+                                    }
+                              }
+                        }
+                  },
+                  "量": {
+                        "label": "量",
+                        "edit": {
+                              "type": "inputNumber",
+                              "props": {
+                                    "value": ":weight",
+                                    "step": 50,
+                                    "min": 0
+                              }
+                        }
+                  },
+                  "单位": {
+                        "label": "单位",
+                        "edit": {
+                              "type": "select",
+                              "props": {
+                                    "value": ":unit",
+                                    "options": [
+                                          {
+                                                "label": "克",
+                                                "value": "克"
+                                          },
+                                          {
+                                                "label": "毫升",
+                                                "value": "毫升"
+                                          }
+                                    ]
+                              }
+                        }
+                  }
+            },
+            "list": {
+                  "primary": "id",
+                  "layout": {
+                        "columns": [
+                              {
+                                    "name": "名称",
+                                    "width": 12
+                              },
+                              {
+                                    "name": "量",
+                                    "width": 8
+                              },
+                              {
+                                    "name": "单位",
+                                    "width": 4
+                              }
+                        ]
+                  }
+            }
+      }
 }
