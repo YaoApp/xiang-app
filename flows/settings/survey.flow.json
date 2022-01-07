@@ -1,101 +1,103 @@
 {
-      "label": "配置",
+      "label": "问卷调查配置",
       "version": "1.0.0",
-      "description": "配置",
+      "description": "问卷调查配置",
       "nodes": [],
       "output": {
-            "columns": {
-                  "题目标题": {
-                        "label": "题目标题",
-                        "edit": {
-                              "type": "input",
-                              "props": {
-                                    "value": ":title"
-                              }
-                        }
-                  },
-                  "题目类型": {
-                        "label": "题目类型",
-                        "edit": {
-                              "type": "select",
-                              "props": {
-                                    "value": ":type",
-                                    "options": [
-                                          {
-                                                "label": "单选",
-                                                "value": "单选"
-                                          },
-                                          {
-                                                "label": "多选",
-                                                "value": "多选"
-                                          },
-                                          {
-                                                "label": "文字",
-                                                "value": "文字"
-                                          },
-                                          {
-                                                "label": "数字",
-                                                "value": "数字"
-                                          },
-                                          {
-                                                "label": "时间",
-                                                "value": "时间"
-                                          }
-                                    ]
-                              }
-                        }
-                  },
-                  "选择项": {
-                        "label": "选择项",
-                        "edit": {
-                              "type": "input",
-                              "props": {}
-                        }
-                  },
-                  "分数": {
-                        "label": "分数",
-                        "edit": {
-                              "type": "inputNumber",
-                              "props": {
-                                    "step": 10
-                              }
-                        }
-                  },
-                  "时间": {
-                        "label": "时间",
-                        "edit": {
-                              "type": "datePicker",
-                              "props": {}
-                        }
-                  },
-                  "频次": {
-                        "label": "频次",
-                        "edit": {
-                              "type": "inputNumber",
-                              "props": {
-                                    "step": 1
-                              }
-                        }
-                  },
-                  "姓名": {
-                        "label": "姓名",
-                        "edit": {
-                              "type": "input",
-                              "props": {}
-                        }
-                  }
-            },
-            "list": {
-                  "primary": "id",
-                  "layout": {
+            "options": {
+                  "单选": {
+                        "one_row": false,
                         "columns": [
                               {
-                                    "name": "题目标题",
-                                    "width": 20
+                                    "type": "input",
+                                    "width": 20,
+                                    "props": {
+                                          "value": ":text",
+                                          "placeholder": "请输入选项内容"
+                                    }
                               },
                               {
-                                    "name": "题目类型",
-                                    "width": 4
+                                    "type": "inputNumber",
+                                    "width": 4,
+                                    "props": {
+                                          "value": ":score",
+                                          "min": 0,
+                                          "max": 100,
+                                          "placeholder": "请输入得分"
+                                    }
+                              }
+                        ]
+                  },
+                  "多选": {
+                        "one_row": false,
+                        "columns": [
+                              {
+                                    "type": "input",
+                                    "width": 20,
+                                    "props": {
+                                          "value": ":text",
+                                          "placeholder": "请输入选项内容"
+                                    }
+                              },
+                              {
+                                    "type": "inputNumber",
+                                    "width": 4,
+                                    "props": {
+                                          "value": ":score",
+                                          "min": 0,
+                                          "max": 100,
+                                          "placeholder": "请输入得分"
+                                    }
+                              }
+                        ]
+                  },
+                  "时间": {
+                        "one_row": true,
+                        "columns": [
+                              {
+                                    "type": "datePicker",
+                                    "width": 24,
+                                    "props": {
+                                          "value": ":lasttime",
+                                          "format": "YYYY年MM月DD日 hh:mm:ss",
+                                          "placeholder": "请输入时间"
+                                    }
+                              }
+                        ]
+                  },
+                  "数字": {
+                        "one_row": true,
+                        "columns": [
+                              {
+                                    "type": "inputNumber",
+                                    "width": 12,
+                                    "props": {
+                                          "value": ":min",
+                                          "min": 0,
+                                          "placeholder": "最小值，不限定留空"
+                                    }
+                              },
+                              {
+                                    "type": "inputNumber",
+                                    "width": 12,
+                                    "props": {
+                                          "value": ":max",
+                                          "min": 0,
+                                          "placeholder": "最小值，不限定留空"
+                                    }
+                              }
+                        ]
+                  },
+                  "文本": {
+                        "one_row": true,
+                        "columns": [
+                              {
+                                    "type": "textArea",
+                                    "width": 24,
+                                    "props": {
+                                          "value": ":feedback",
+                                          "placeholder": "请输入文字内容"
+                                    }
                               }
                         ]
                   }

@@ -155,7 +155,7 @@
             "调查问卷": {
                   "label": "调查问卷",
                   "edit": {
-                        "type": "quickTable",
+                        "type": "survey",
                         "props": {
                               "setting": "survey",
                               "value": ":survey",
