@@ -144,7 +144,7 @@
                   "edit": {
                         "type": "quickTable",
                         "props": {
-                              "name": "test",
+                              "setting": "test",
                               "value": ":test",
                               "query": {
                                     "sort": "$index"
