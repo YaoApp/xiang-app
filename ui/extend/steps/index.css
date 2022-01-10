@@ -1,0 +1,74 @@
+.group {
+	margin-bottom: 20px;
+}
+
+.group:last-child {
+	margin-bottom: 0;
+}
+
+.group .title {
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.group .body {
+	margin-top: 1em;
+	border: 1px solid var(--color_border);
+	border-radius: 6px;
+}
+
+.group .body .item {
+	display: flex;
+	padding: 0.8em;
+	border-bottom: 1px solid var(--color_border);
+	line-height: 24px;
+}
+
+.group .body .item:last-child {
+	border-bottom: none;
+}
+
+.group .body .item .fold-icon {
+	margin-top: 4px;
+	margin-right: 0.6em;
+	color: rgb(162, 165, 185);
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.group .body .item:hover .icon-chevron-right::before {
+	content: '\e92e' !important;
+}
+
+.group .body .item .success-icon {
+	margin-top: 4px;
+	margin-right: 0.5em;
+	color: var(--color_primary);
+	font-size: 16px;
+}
+
+.group .body .item .failed-icon {
+	margin-top: 4px;
+	margin-right: 0.5em;
+	color: var(--color_danger);
+	font-size: 16px;
+}
+
+.group .body .item .content .name {
+	color: #a2a5b9;
+	font-weight: 500;
+}
+
+.group .body .item .content .log {
+	display: none;
+	color: #a2a5b9;
+	font-weight: 300;
+}
+
+.group .body .item:hover .content .name {
+	color: #41b883;
+}
+
+.group .body .item:hover .content .log {
+	display: block;
+}

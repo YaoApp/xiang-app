@@ -93,6 +93,17 @@
             }
       },
       "columns": {
+            "扩展内容": {
+                  "label": "扩展内容",
+                  "edit": {
+                        "type": "extend",
+                        "props": {
+                              "link": "/extend/steps",
+                              "value": ":manu",
+                              "max_height": 600
+                        }
+                  }
+            },
             "日程表（测试）": {
                   "label": "日程表（测试）",
                   "edit": {
@@ -827,6 +838,10 @@
                                                       ]
                                                 }
                                           ]
+                                    },
+                                    {
+                                          "name": "扩展内容",
+                                          "width": 24
                                     },
                                     {
                                           "name": "动态列表",
