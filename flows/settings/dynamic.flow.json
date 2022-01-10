@@ -1,0 +1,105 @@
+{
+      "label": "配置",
+      "version": "1.0.0",
+      "description": "配置",
+      "nodes": [],
+      "output": {
+            "columns": {
+                  "分组": {
+                        "label": "分组",
+                        "edit": {
+                              "type": "input",
+                              "props": {
+                                    "value": ":group"
+                              }
+                        }
+                  },
+                  "指标类型": {
+                        "label": "指标类型",
+                        "edit": {
+                              "type": "select",
+                              "props": {
+                                    "value": ":type",
+                                    "options": [
+                                          {
+                                                "label": "身高",
+                                                "value": "身高"
+                                          },
+                                          {
+                                                "label": "体重",
+                                                "value": "体重"
+                                          }
+                                    ]
+                              }
+                        }
+                  },
+                  "计算符": {
+                        "label": "计算符",
+                        "edit": {
+                              "type": "select",
+                              "props": {
+                                    "value": ":calc",
+                                    "options": [
+                                          {
+                                                "label": "大于等于",
+                                                "value": "大于等于"
+                                          },
+                                          {
+                                                "label": "小于",
+                                                "value": "小于"
+                                          }
+                                    ]
+                              }
+                        }
+                  },
+                  "数值": {
+                        "label": "数值",
+                        "edit": {
+                              "type": "select",
+                              "props": {
+                                    "value": ":value",
+                                    "options": [
+                                          {
+                                                "label": "0",
+                                                "value": 0
+                                          },
+                                          {
+                                                "label": "100",
+                                                "value": 100
+                                          },
+                                          {
+                                                "label": "200",
+                                                "value": 200
+                                          }
+                                    ]
+                              }
+                        }
+                  }
+            },
+            "list": {
+                  "primary": "id",
+                  "layout": {
+                        "columns": [
+                              {
+                                    "name": "分组",
+                                    "width": 24
+                              }
+                        ],
+                        "children": [
+                              {
+                                    "name": "指标类型",
+                                    "width": 8
+                              },
+                              {
+                                    "name": "计算符",
+                                    "width": 8
+                              },
+                              {
+                                    "name": "数值",
+                                    "width": 8
+                              }
+                        ]
+                  }
+            }
+      }
+}

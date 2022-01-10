@@ -142,7 +142,7 @@
             "快捷表格": {
                   "label": "快捷表格",
                   "edit": {
-                        "type": "quickTable",
+                        "type": "dynamicList",
                         "props": {
                               "setting": "test",
                               "value": ":test",
@@ -152,10 +152,23 @@
                         }
                   }
             },
+            "动态列表": {
+                  "label": "动态列表",
+                  "edit": {
+                        "type": "dynamicList",
+                        "props": {
+                              "setting": "dynamic",
+                              "value": ":dynamic",
+                              "query": {
+                                    "sort": "$index"
+                              }
+                        }
+                  }
+            },
             "调查问卷": {
                   "label": "调查问卷",
                   "edit": {
-                        "type": "survey",
+                        "type": "conditionList",
                         "props": {
                               "setting": "survey",
                               "value": ":survey",
@@ -708,7 +721,9 @@
                                     "useModal": true,
                                     "type": "view",
                                     "title": "查看-Modal",
-                                    "icon": "icon-eye"
+                                    "icon": "icon-eye",
+                                    "formName": "service",
+                                    "formId": ":id"
                               },
                               {
                                     "useModal": false,
@@ -800,6 +815,10 @@
                                                       ]
                                                 }
                                           ]
+                                    },
+                                    {
+                                          "name": "动态列表",
+                                          "width": 24
                                     },
                                     {
                                           "name": "调查问卷",

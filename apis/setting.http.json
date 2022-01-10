@@ -30,6 +30,19 @@
                         "status": 200,
                         "type": "application/json"
                   }
+            },
+            {
+                  "path": "/dynamic",
+                  "method": "GET",
+                  "guard": "-",
+                  "process": "flows.settings.dynamic",
+                  "in": [
+                        ":query"
+                  ],
+                  "out": {
+                        "status": 200,
+                        "type": "application/json"
+                  }
             }
       ]
 }
