@@ -99,7 +99,7 @@
                         "type": "extend",
                         "props": {
                               "link": "/extend/steps",
-                              "value": ":manu",
+                              "value":":name",
                               "max_height": 600
                         }
                   }
@@ -745,7 +745,7 @@
                                     "type": "view",
                                     "title": "查看-Modal",
                                     "icon": "icon-eye",
-                                    "formName": "service",
+                                    "formName": "menu",
                                     "formId": ":id"
                               },
                               {
