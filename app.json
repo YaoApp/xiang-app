@@ -5,7 +5,19 @@
       "option": {
             "nav_user": "xiang.user",
             "nav_menu": "menu",
-            "index": "/kanban/kanban.index"
+            "hide_user": true,
+            "hide_menu": true,
+            "index": "/kanban/kanban.index",
+            "login_images": {
+                  "admin": "/extend/undraw_movie_night_re_9umk.svg",
+                  "user": "/extend/undraw_pie_graph_re_fvol.svg"
+            },
+            "login": {
+                  "password": {
+                        "captcha": "/api/xiang/user/captcha",
+                        "login": "/api/user/login"
+                  }
+            }
       },
       "storage": {
             "default": "oss",
