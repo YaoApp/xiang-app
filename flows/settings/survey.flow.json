@@ -10,10 +10,17 @@
                         "columns": [
                               {
                                     "type": "input",
-                                    "width": 20,
+                                    "width": 19,
                                     "props": {
                                           "value": ":text",
                                           "placeholder": "请输入选项内容"
+                                    }
+                              },
+                              {
+                                    "type": "label",
+                                    "width": 1,
+                                    "props": {
+                                          "value": "每"
                                     }
                               },
                               {
