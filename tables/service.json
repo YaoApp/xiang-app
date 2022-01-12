@@ -759,51 +759,23 @@
                   },
                   "operation": {
                         "hideView": true,
-                        "hideEdit": true,
+                        "hideEdit": false,
                         "unfold": true,
-                        "width": 0,
-                        "items": [
+                        "width": 220,
+                        "checkbox": [
                               {
-                                    "useModal": true,
-                                    "type": "view",
-                                    "title": "查看-Modal",
-                                    "icon": "icon-eye",
-                                    "formName": "menu",
-                                    "formId": ":id"
-                              },
-                              {
-                                    "useModal": false,
-                                    "type": "Edit",
-                                    "title": "编辑-Modal",
-                                    "icon": "icon-edit-2"
-                              },
-                              {
-                                    "title": "上架",
-                                    "icon": "icon-arrow-up",
-                                    "confirm": true,
-                                    "disabled": ":id",
-                                    "api": "/api/xiang/table/service/on",
-                                    "data": {
-                                          "id": ":id"
-                                    }
-                              },
-                              {
-                                    "title": "下架",
-                                    "icon": "icon-arrow-down",
-                                    "api": "/api/xiang/table/service/save",
-                                    "data": {
-                                          "id": ":id"
-                                    }
-                              },
-                              {
-                                    "title": "删除",
-                                    "icon": "icon-trash-2",
-                                    "confirm": true,
-                                    "danger": true,
-                                    "api": "/api/xiang/table/service/del",
-                                    "data": {
-                                          "id": ":id"
-                                    }
+                                    "value": ":status",
+                                    "visible_label": false,
+                                    "status": [
+                                          {
+                                                "label": "开启",
+                                                "value": "enabled"
+                                          },
+                                          {
+                                                "label": "关闭",
+                                                "value": "disabled"
+                                          }
+                                    ]
                               }
                         ]
                   }
