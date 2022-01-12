@@ -93,13 +93,36 @@
             }
       },
       "columns": {
+            "多选": {
+                  "label": "多选",
+                  "edit": {
+                        "type": "checkboxGroup",
+                        "props": {
+                              "value": ":checkboxGroup",
+                              "options": [
+                                    {
+                                          "label": "Apple",
+                                          "value": 1
+                                    },
+                                    {
+                                          "label": "Pear",
+                                          "value": 2
+                                    },
+                                    {
+                                          "label": "Orange",
+                                          "value": 3
+                                    }
+                              ]
+                        }
+                  }
+            },
             "扩展内容": {
                   "label": "扩展内容",
                   "edit": {
                         "type": "extend",
                         "props": {
                               "link": "/extend/steps",
-                              "value":":name",
+                              "value": ":name",
                               "max_height": 600
                         }
                   }
@@ -838,6 +861,10 @@
                                                       ]
                                                 }
                                           ]
+                                    },
+                                    {
+                                          "name": "多选",
+                                          "width": 24
                                     },
                                     {
                                           "name": "扩展内容",
