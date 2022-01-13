@@ -777,6 +777,16 @@
                                           }
                                     ]
                               }
+                        ],
+                        "items": [
+                              {
+                                    "useModal": true,
+                                    "type": "view",
+                                    "title": "查看-Modal",
+                                    "icon": "icon-eye",
+                                    "formName": "menu",
+                                    "formId": ":id"
+                              }
                         ]
                   }
             }

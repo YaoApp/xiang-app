@@ -5,6 +5,15 @@
       "nodes": [],
       "output": {
             "columns": {
+                  "文字": {
+                        "label": "文字",
+                        "edit": {
+                              "type": "label",
+                              "props": {
+                                    "value": "每"
+                              }
+                        }
+                  },
                   "分组": {
                         "label": "分组",
                         "edit": {
@@ -82,7 +91,11 @@
                         "columns": [
                               {
                                     "name": "分组",
-                                    "width": 24
+                                    "width": 23
+                              },
+                              {
+                                    "name": "文字",
+                                    "width": 1
                               }
                         ],
                         "children": [
