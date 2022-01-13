@@ -93,6 +93,20 @@
             }
       },
       "columns": {
+            "指示条": {
+                  "label": "指示条",
+                  "edit": {
+                        "type": "chart",
+                        "props": {
+                              "type": "indicator",
+                              "value": ":name",
+                              "hide_label": true,
+                              "chart_props": {
+                                    "height": 120
+                              }
+                        }
+                  }
+            },
             "调查问卷-用户端": {
                   "label": "调查问卷-用户端",
                   "edit": {
@@ -152,7 +166,6 @@
                         "props": {
                               "type": "bar",
                               "value": ":service",
-                              "hide_title": true,
                               "chart_props": {
                                     "height": 240,
                                     "x_key": "name",
@@ -852,6 +865,10 @@
                                                       ]
                                                 }
                                           ]
+                                    },
+                                    {
+                                          "name": "指示条",
+                                          "width": 24
                                     },
                                     {
                                           "name": "调查问卷-用户端",

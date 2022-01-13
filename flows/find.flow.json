@@ -44,12 +44,19 @@
                   ]
             },
             {
+                  "name": "indicator",
+                  "script": "indicator",
+                  "args": [
+                        {}
+                  ]
+            },
+            {
                   "name": "问卷",
                   "process": "xiang.helper.MapSet",
                   "args": [
                         "{{$res.Test}}",
                         "survey",
-                        []
+                        "{{$res.indicator}}"
                   ]
             }
       ],
