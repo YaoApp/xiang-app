@@ -93,6 +93,15 @@
             }
       },
       "columns": {
+            "调查问卷-用户端": {
+                  "label": "调查问卷-用户端",
+                  "edit": {
+                        "type": "conditionForm",
+                        "props": {
+                              "value": ":name"
+                        }
+                  }
+            },
             "多选": {
                   "label": "多选",
                   "edit": {
@@ -843,6 +852,10 @@
                                                       ]
                                                 }
                                           ]
+                                    },
+                                    {
+                                          "name": "调查问卷-用户端",
+                                          "width": 24
                                     },
                                     {
                                           "name": "多选",

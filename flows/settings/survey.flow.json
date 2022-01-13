@@ -60,17 +60,7 @@
                   },
                   "时间": {
                         "one_row": true,
-                        "columns": [
-                              {
-                                    "type": "datePicker",
-                                    "width": 24,
-                                    "props": {
-                                          "value": ":lasttime",
-                                          "format": "YYYY年MM月DD日 hh:mm:ss",
-                                          "placeholder": "请输入时间"
-                                    }
-                              }
-                        ]
+                        "columns": []
                   },
                   "数字": {
                         "one_row": true,
@@ -99,11 +89,21 @@
                         "one_row": true,
                         "columns": [
                               {
-                                    "type": "textArea",
-                                    "width": 24,
+                                    "type": "inputNumber",
+                                    "width": 12,
                                     "props": {
-                                          "value": ":feedback",
-                                          "placeholder": "请输入文字内容"
+                                          "value": ":minLength",
+                                          "min": 0,
+                                          "placeholder": "最小长度，不限定留空"
+                                    }
+                              },
+                              {
+                                    "type": "inputNumber",
+                                    "width": 12,
+                                    "props": {
+                                          "value": ":maxLength",
+                                          "min": 0,
+                                          "placeholder": "最小长度，不限定留空"
                                     }
                               }
                         ]
