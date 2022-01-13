@@ -1,64 +1,51 @@
 {
-      "label": "查找合并",
-      "version": "1.0.0",
-      "description": "最新信息",
-      "nodes": [
+  "label": "查找合并",
+  "version": "1.0.0",
+  "description": "最新信息",
+  "nodes": [
+    {
+      "name": "服务",
+      "process": "models.service.Get",
+      "args": [
+        {
+          "withs": {
+            "manu": {},
+            "kind": {}
+          },
+          "wheres": [
             {
-                  "name": "服务",
-                  "process": "models.service.Get",
-                  "args": [
-                        {
-                              "withs": {
-                                    "manu": {},
-                                    "kind": {}
-                              },
-                              "wheres": [
-                                    {
-                                          "column": "id",
-                                          "value": "{{$in.0}}"
-                                    }
-                              ]
-                        }
-                  ]
-            },
-            {
-                  "name": "服务列表",
-                  "process": "models.service.Get",
-                  "args": [
-                        {
-                              "withs": {
-                                    "manu": {},
-                                    "kind": {}
-                              },
-                              "limit": 10
-                        }
-                  ],
-                  "script": "data"
-            },
-            {
-                  "name": "Test",
-                  "process": "models.test.Get",
-                  "script": "datatest",
-                  "args": [
-                        {}
-                  ]
-            },
-            {
-                  "name": "indicator",
-                  "script": "indicator",
-                  "args": [
-                        {}
-                  ]
-            },
-            {
-                  "name": "问卷",
-                  "process": "xiang.helper.MapSet",
-                  "args": [
-                        "{{$res.Test}}",
-                        "survey",
-                        "{{$res.indicator}}"
-                  ]
+              "column": "id",
+              "value": "{{$in.0}}"
             }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "服务列表",
+      "process": "models.service.Get",
+      "args": [
+        {
+          "withs": {
+            "manu": {},
+            "kind": {}
+          },
+          "limit": 10
+        }
       ],
-      "output": "{{$res.问卷}}"
+      "script": "data"
+    },
+    {
+      "name": "Test",
+      "process": "models.test.Get",
+      "script": "datatest",
+      "args": [{}]
+    },
+    {
+      "name": "问卷",
+      "script": "indicator",
+      "args": [{}]
+    }
+  ],
+  "output": "{{$res.问卷}}"
 }

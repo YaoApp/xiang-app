@@ -1,5 +1,5 @@
 function main(args, out, res) {
-	return {
-		ttt: '123'
-	}
+  var test = res["Test"];
+  test["ttt"] = 123;
+  return test;
 }
