@@ -99,10 +99,12 @@
                         "type": "chart",
                         "props": {
                               "type": "indicator",
-                              "value": ":name",
+                              "value": ":indicator",
                               "hide_label": true,
                               "chart_props": {
-                                    "height": 120
+                                    "table": "service",
+                                    "title": "热量",
+                                    "id": ":id"
                               }
                         }
                   }

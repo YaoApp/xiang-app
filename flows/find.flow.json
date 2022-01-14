@@ -1,60 +1,83 @@
 {
-  "label": "查找合并",
-  "version": "1.0.0",
-  "description": "最新信息",
-  "nodes": [
-    {
-      "name": "服务",
-      "process": "models.service.Get",
-      "args": [
-        {
-          "withs": {
-            "manu": {},
-            "kind": {}
-          },
-          "wheres": [
+      "label": "查找合并",
+      "version": "1.0.0",
+      "description": "最新信息",
+      "nodes": [
             {
-              "column": "id",
-              "value": "{{$in.0}}"
+                  "name": "服务",
+                  "process": "models.service.Get",
+                  "args": [
+                        {
+                              "withs": {
+                                    "manu": {},
+                                    "kind": {}
+                              },
+                              "wheres": [
+                                    {
+                                          "column": "id",
+                                          "value": "{{$in.0}}"
+                                    }
+                              ]
+                        }
+                  ]
+            },
+            {
+                  "name": "服务列表",
+                  "process": "models.service.Get",
+                  "args": [
+                        {
+                              "withs": {
+                                    "manu": {},
+                                    "kind": {}
+                              },
+                              "limit": 10
+                        }
+                  ],
+                  "script": "data"
+            },
+            {
+                  "name": "Test",
+                  "process": "models.test.Get",
+                  "script": "datatest",
+                  "args": [
+                        {}
+                  ]
+            },
+            {
+                  "name": "结果",
+                  "process": "xiang.helper.MapSet",
+                  "args": [
+                        "{{$res.Test}}",
+                        "survey_result",
+                        [
+                              70,
+                              [
+                                    90,
+                                    70
+                              ],
+                              60,
+                              "2022-01-05",
+                              "asdjajdjjdajdjasjd"
+                        ]
+                  ]
+            },
+            {
+                  "name": "result",
+                  "process": "xiang.helper.MapSet",
+                  "args": [
+                        "{{$res.结果}}",
+                        "indicator",
+                        {
+                              "max": 3900,
+                              "ok": 2100,
+                              "value": 1300,
+                              "desc": [
+                                    "不足",
+                                    "达标"
+                              ]
+                        }
+                  ]
             }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "服务列表",
-      "process": "models.service.Get",
-      "args": [
-        {
-          "withs": {
-            "manu": {},
-            "kind": {}
-          },
-          "limit": 10
-        }
       ],
-      "script": "data"
-    },
-    {
-      "name": "Test",
-      "process": "models.test.Get",
-      "script": "datatest",
-      "args": [{}]
-    },
-    {
-      "name": "问卷",
-      "script": "indicator",
-      "args": [{}]
-    },
-    {
-      "name": "结果",
-      "process": "xiang.helper.MapSet",
-      "args": [
-        "{{$res.问卷}}",
-        "survey_result",
-        [70, [90, 70], 60, "2022-01-05", "asdjajdjjdajdjasjd"]
-      ]
-    }
-  ],
-  "output": "{{$res.结果}}"
+      "output": "{{$res.result}}"
 }
