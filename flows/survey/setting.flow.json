@@ -1,51 +1,81 @@
 {
-  "label": "问卷详情配置",
-  "version": "1.0.0",
-  "description": "问卷详情配置",
-  "nodes": [],
-  "output": {
-    "items": [
-      {
-        "label": "您吃的最多的青菜是什么?",
-        "type": "checkboxGroup",
-        "props": {
-          "value": ":items.0",
-          "options": [
-            { "label": "白菜", "value": "白菜" },
-            { "label": "胡萝卜", "value": "胡萝卜" },
-            { "label": "油麦菜", "value": "油麦菜" },
-            { "label": "玉米", "value": "玉米" }
-          ]
-        }
-      },
-      {
-        "label": "您一周大概喝几次酒?",
-        "type": "radioGroup",
-        "props": {
-          "value": ":items.1",
-          "options": [
-            { "label": "1次", "value": "1次" },
-            { "label": "3次", "value": "3次" },
-            { "label": "5次", "value": "5次" },
-            { "label": "天天喝", "value": "天天喝" }
-          ]
-        }
-      },
-      {
-        "label": "您给自己的身体状况打多少分?",
-        "type": "input",
-        "props": {
-          "value": ":items.2"
-        }
-      },
-      {
-        "label": "简单描述一下您的日常饮食",
-        "type": "input",
-        "props": {
-          "value": ":items.3"
-        }
-      }
-    ],
-    "option": {}
-  }
+      "label": "问卷详情配置",
+      "version": "1.0.0",
+      "description": "问卷详情配置",
+      "nodes": [],
+      "output": [
+            {
+                  "title": "您吃的最多的青菜是什么？",
+                  "type": "单选",
+                  "children": [
+                        {
+                              "text": "白菜",
+                              "score": 40
+                        },
+                        {
+                              "text": "胡萝卜",
+                              "score": 50
+                        },
+                        {
+                              "text": "油麦菜",
+                              "score": 60
+                        },
+                        {
+                              "text": "玉米",
+                              "score": 70
+                        }
+                  ],
+                  "value": 70
+            },
+            {
+                  "type": "多选",
+                  "title": "您一周大概喝几次酒？",
+                  "children": [
+                        {
+                              "text": "1次",
+                              "score": 90
+                        },
+                        {
+                              "text": "3次",
+                              "score": 80
+                        },
+                        {
+                              "text": "5次",
+                              "score": 70
+                        },
+                        {
+                              "text": "天天喝",
+                              "score": 30
+                        }
+                  ],
+                  "value": [90,70]
+            },
+            {
+                  "type": "数字",
+                  "title": "您给自己的身体状况打多少分？",
+                  "children": [
+                        {
+                              "min": 0,
+                              "max": 100
+                        }
+                  ],
+                  "value": 70
+            },
+            {
+                  "type": "时间",
+                  "title": "您上一次体检的时间？",
+                  "value": "2022-01-05"
+            },
+            {
+                  "type": "文本",
+                  "title": "简单描述一下您的日常饮食？",
+                  "children": [
+                        {
+                              "minLength": 12,
+                              "maxLength": 300
+                        }
+                  ],
+                  "value": "asdjajdjjdajdjasjd"
+            }
+      ]
 }

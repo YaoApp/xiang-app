@@ -112,7 +112,8 @@
                   "edit": {
                         "type": "conditionForm",
                         "props": {
-                              "value": ":name"
+                              "value": ":survey_result",
+                              "id": ":id"
                         }
                   }
             },
