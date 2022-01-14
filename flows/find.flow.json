@@ -45,7 +45,16 @@
       "name": "问卷",
       "script": "indicator",
       "args": [{}]
+    },
+    {
+      "name": "结果",
+      "process": "xiang.helper.MapSet",
+      "args": [
+        "{{$res.问卷}}",
+        "survey_result",
+        [70, [90, 70], 60, "2022-01-05", "asdjajdjjdajdjasjd"]
+      ]
     }
   ],
-  "output": "{{$res.问卷}}"
+  "output": "{{$res.结果}}"
 }
