@@ -1,0 +1,31 @@
+{
+  "name": "调查",
+  "version": "1.0.0",
+  "description": "配置API",
+  "group": "survey",
+  "guard": "-",
+  "paths": [
+    {
+      "path": "/find/:id",
+      "method": "GET",
+      "guard": "-",
+      "process": "flows.survey.data",
+      "in": [":$param.id"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "/setting/:id",
+      "method": "GET",
+      "guard": "-",
+      "process": "flows.survey.setting",
+      "in": [":$param.id"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    }
+  ]
+}
