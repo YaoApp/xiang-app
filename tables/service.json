@@ -102,6 +102,7 @@
                               "value": ":indicator",
                               "hide_label": true,
                               "chart_props": {
+                                    "height": 240,
                                     "table": "service",
                                     "title": "热量",
                                     "id": ":id"
@@ -115,6 +116,7 @@
                         "type": "conditionForm",
                         "props": {
                               "value": ":survey_result",
+                              "api": "/api/survey/setting/1",
                               "id": ":id"
                         }
                   }
@@ -169,6 +171,7 @@
                         "props": {
                               "type": "bar",
                               "value": ":service",
+                              "hide_label": true,
                               "chart_props": {
                                     "height": 240,
                                     "x_key": "name",
@@ -279,7 +282,7 @@
                   }
             },
             "关联服务": {
-                  "label": "关联服务",
+                  "label": "",
                   "edit": {
                         "type": "table",
                         "props": {
@@ -871,7 +874,11 @@
                                     },
                                     {
                                           "name": "指示条",
-                                          "width": 24
+                                          "width": 12
+                                    },
+                                    {
+                                          "name": "表格图表（测试）",
+                                          "width": 12
                                     },
                                     {
                                           "name": "调查问卷-用户端",
@@ -895,10 +902,6 @@
                                     },
                                     {
                                           "name": "日程表（测试）",
-                                          "width": 24
-                                    },
-                                    {
-                                          "name": "表格图表（测试）",
                                           "width": 24
                                     },
                                     {
