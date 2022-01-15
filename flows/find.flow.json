@@ -62,7 +62,7 @@
                   ]
             },
             {
-                  "name": "result",
+                  "name": "indicator",
                   "process": "xiang.helper.MapSet",
                   "args": [
                         "{{$res.结果}}",
@@ -77,7 +77,79 @@
                               ]
                         }
                   ]
+            },
+            {
+                  "name": "schedule",
+                  "process": "xiang.helper.MapSet",
+                  "args": [
+                        "{{$res.indicator}}",
+                        "schedule",
+                        [
+                              {
+                                    "children": [
+                                          {
+                                                "title": "小荤",
+                                                "value": [
+                                                      {
+                                                            "name": 4,
+                                                            "weight": 3
+                                                      }
+                                                ]
+                                          },
+                                          {
+                                                "title": "素"
+                                          }
+                                    ],
+                                    "title": "早"
+                              },
+                              {
+                                    "children": [
+                                          {
+                                                "rows": 2,
+                                                "title": "大荤",
+                                                "value": [
+                                                      null,
+                                                      [
+                                                            {
+                                                                  "name": 4,
+                                                                  "weight": 1
+                                                            }
+                                                      ]
+                                                ]
+                                          },
+                                          {
+                                                "title": "小荤"
+                                          },
+                                          {
+                                                "title": "素"
+                                          },
+                                          {
+                                                "title": "主食"
+                                          }
+                                    ],
+                                    "title": "中"
+                              },
+                              {
+                                    "children": [
+                                          {
+                                                "rows": 2,
+                                                "title": "大荤"
+                                          },
+                                          {
+                                                "title": "小荤"
+                                          },
+                                          {
+                                                "title": "素"
+                                          },
+                                          {
+                                                "title": "主食"
+                                          }
+                                    ],
+                                    "title": "晚"
+                              }
+                        ]
+                  ]
             }
       ],
-      "output": "{{$res.result}}"
+      "output": "{{$res.schedule}}"
 }

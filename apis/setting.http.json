@@ -43,6 +43,19 @@
                         "status": 200,
                         "type": "application/json"
                   }
+            },
+            {
+                  "path": "/schedule",
+                  "method": "GET",
+                  "guard": "-",
+                  "process": "flows.settings.schedule",
+                  "in": [
+                        ":query"
+                  ],
+                  "out": {
+                        "status": 200,
+                        "type": "application/json"
+                  }
             }
       ]
 }

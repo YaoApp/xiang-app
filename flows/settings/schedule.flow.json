@@ -1,0 +1,94 @@
+{
+      "label": "配置",
+      "version": "1.0.0",
+      "description": "配置",
+      "nodes": [],
+      "output": {
+            "days": [
+                  "周一",
+                  "周二",
+                  "周三",
+                  "周四",
+                  "周五",
+                  "周六",
+                  "周日"
+            ],
+            "cell": [
+                  {
+                        "label": "菜谱",
+                        "type": "select",
+                        "width": 200,
+                        "props": {
+                              "value": ":name",
+                              "showSearch": true,
+                              "remote": {
+                                    "api": "/api/kind/get",
+                                    "query": {}
+                              }
+                        }
+                  },
+                  {
+                        "label": "量",
+                        "type": "inputNumber",
+                        "width": 80,
+                        "prefix": "X",
+                        "after": "份",
+                        "props": {
+                              "value": ":weight",
+                              "step": 10,
+                              "min": 0,
+                              "placeholder": "数量"
+                        }
+                  }
+            ],
+            "rows": [
+                  {
+                        "title": "早",
+                        "children": [
+                              {
+                                    "title": "小荤"
+                              },
+                              {
+                                    "title": "素"
+                              }
+                        ]
+                  },
+                  {
+                        "title": "中",
+                        "children": [
+                              {
+                                    "title": "大荤",
+                                    "rows": 2
+                              },
+                              {
+                                    "title": "小荤"
+                              },
+                              {
+                                    "title": "素"
+                              },
+                              {
+                                    "title": "主食"
+                              }
+                        ]
+                  },
+                  {
+                        "title": "晚",
+                        "children": [
+                              {
+                                    "title": "大荤",
+                                    "rows": 2
+                              },
+                              {
+                                    "title": "小荤"
+                              },
+                              {
+                                    "title": "素"
+                              },
+                              {
+                                    "title": "主食"
+                              }
+                        ]
+                  }
+            ]
+      }
+}

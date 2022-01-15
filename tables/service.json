@@ -160,7 +160,9 @@
                   "edit": {
                         "type": "schedule",
                         "props": {
-                              "value": ":name"
+                              "value": ":schedule",
+                              "api": "/api/xiang/setting/schedule",
+                              "id": ":id"
                         }
                   }
             },
@@ -873,6 +875,10 @@
                                           ]
                                     },
                                     {
+                                          "name": "日程表（测试）",
+                                          "width": 24
+                                    },
+                                    {
                                           "name": "指示条",
                                           "width": 12
                                     },
@@ -898,10 +904,6 @@
                                     },
                                     {
                                           "name": "调查问卷",
-                                          "width": 24
-                                    },
-                                    {
-                                          "name": "日程表（测试）",
                                           "width": 24
                                     },
                                     {
