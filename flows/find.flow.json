@@ -69,7 +69,6 @@
                         "indicator",
                         {
                               "max": 3900,
-                              "ok": 2100,
                               "value": 1300,
                               "desc": [
                                     "不足",
