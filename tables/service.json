@@ -747,14 +747,14 @@
                   "view": {},
                   "edit": {},
                   "import": {
-                        "props":{
-                              "api":{
-                                    "setting":"/api/xiang/import/order/setting",
-                                    "mapping":"/api/xiang/import/order/mapping",
-                                    "mapping_setting":"/api/xiang/import/order/mapping/setting",
-                                    "preview":"/api/xiang/import/order/data",
-                                    "preview_setting":"/api/xiang/import/order/data",
-                                    "import":"/api/xiang/import/order"
+                        "props": {
+                              "api": {
+                                    "setting": "/api/xiang/import/order/setting",
+                                    "mapping": "/api/xiang/import/order/mapping",
+                                    "mapping_setting": "/api/xiang/import/order/mapping/setting",
+                                    "preview": "/api/xiang/import/order/data",
+                                    "preview_setting": "/api/xiang/import/order/data/setting",
+                                    "import": "/api/xiang/import/order"
                               }
                         }
                   },
@@ -803,6 +803,9 @@
                         "hideEdit": false,
                         "unfold": true,
                         "width": 220,
+                        "scroll": {
+                              "x": 1200
+                        },
                         "checkbox": [
                               {
                                     "value": ":status",
