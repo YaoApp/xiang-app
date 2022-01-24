@@ -7,12 +7,15 @@
             "nav_menu": "menu",
             "hide_user": true,
             "hide_menu": true,
-            "index": "/kanban/kanban.index",
-            "login_images": {
-                  "admin": "/extend/undraw_movie_night_re_9umk.svg",
-                  "user": "/extend/undraw_pie_graph_re_fvol.svg"
-            },
             "login": {
+                  "image": {
+                        "admin": "/extend/undraw_movie_night_re_9umk.svg",
+                        "user": "/extend/undraw_pie_graph_re_fvol.svg"
+                  },
+                  "entry": {
+                        "admin": "/kanban/kanban.index",
+                        "user": "/table/service"
+                  },
                   "password": {
                         "captcha": "/api/xiang/user/captcha",
                         "login": "/api/user/login"

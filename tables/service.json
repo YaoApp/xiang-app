@@ -121,6 +121,29 @@
                         }
                   }
             },
+            "单选": {
+                  "label": "单选",
+                  "edit": {
+                        "type": "radioGroup",
+                        "props": {
+                              "value": ":radioGroup",
+                              "options": [
+                                    {
+                                          "label": "Apple",
+                                          "value": 1
+                                    },
+                                    {
+                                          "label": "Pear",
+                                          "value": 2
+                                    },
+                                    {
+                                          "label": "Orange",
+                                          "value": 3
+                                    }
+                              ]
+                        }
+                  }
+            },
             "多选": {
                   "label": "多选",
                   "edit": {
@@ -905,8 +928,12 @@
                                           "width": 24
                                     },
                                     {
+                                          "name": "单选",
+                                          "width": 12
+                                    },
+                                    {
                                           "name": "多选",
-                                          "width": 24
+                                          "width": 12
                                     },
                                     {
                                           "name": "扩展内容",
