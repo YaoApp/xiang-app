@@ -1,0 +1,56 @@
+{
+  "label": "查找合并",
+  "version": "1.0.0",
+  "description": "最新信息",
+  "nodes": [
+    {
+      "name": "用户",
+      "process": "models.xiang.user.Get",
+      "args": [
+        {
+          "select": ["id", "email", "name", "type"],
+          "wheres": [{ "column": "id", "value": "?:$in.0" }],
+          "limit": 1
+        }
+      ]
+    },
+    {
+      "name": "菜单",
+      "process": "flows.xiang.menu",
+      "args": ["{{$res.用户.0.id}}"]
+    },
+    {
+      "name": "SID",
+      "process": "session.start"
+    },
+    {
+      "name": "JWT",
+      "process": "xiang.helper.JWTMake",
+      "args": [
+        "{{$res.用户.0.id}}",
+        {},
+        {
+          "timeout": 3600,
+          "sid": "{{$res.SID}}"
+        }
+      ]
+    },
+    {
+      "name": "设置会话数据",
+      "process": "session.set",
+      "args": ["user", "{{$res.用户.0}}"]
+    },
+    {
+      "name": "设置会话用户ID",
+      "process": "session.set",
+      "args": ["user_id", "{{$res.用户.0.id}}"]
+    }
+  ],
+  "output": {
+    "sid": "{{$res.SID}}",
+    "user": "{{$res.用户.0}}",
+    "menus": "{{$res.菜单}}",
+    "token": "{{$res.JWT.token}}",
+    "expires_at": "{{$res.JWT.expires_at}}"
+  }
+}
