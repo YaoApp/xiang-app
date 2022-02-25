@@ -26,38 +26,40 @@
                   "指标类型": {
                         "label": "指标类型",
                         "edit": {
-                              "type": "select",
+                              "type": "cascader",
                               "props": {
                                     "value": ":type",
-                                    "options": [
-                                          {
-                                                "label": "身高",
-                                                "value": "身高"
-                                          },
-                                          {
-                                                "label": "体重",
-                                                "value": "体重"
+                                    "remote": {
+                                          "api": "/api/cascader/search",
+                                          "query": {
+                                                "select": [
+                                                      "id",
+                                                      "name"
+                                                ],
+                                                "keyword": "where_name_like"
                                           }
-                                    ]
+                                    }
                               }
                         }
                   },
                   "计算符": {
                         "label": "计算符",
                         "edit": {
-                              "type": "select",
+                              "type": "treeSelect",
                               "props": {
                                     "value": ":calc",
-                                    "options": [
-                                          {
-                                                "label": "大于等于",
-                                                "value": "大于等于"
-                                          },
-                                          {
-                                                "label": "小于",
-                                                "value": "小于"
+                                    "multiple":true,
+                                    "labelInValue":true,
+                                    "remote": {
+                                          "api": "/api/tree/search",
+                                          "query": {
+                                                "select": [
+                                                      "id",
+                                                      "name"
+                                                ],
+                                                "keyword": "where_name_like"
                                           }
-                                    ]
+                                    }
                               }
                         }
                   },
