@@ -1,0 +1,13 @@
+#extend_filter_items .btn_filter {
+	margin-right: 12px;
+	width: 80px;
+	height: 36px;
+	border: 1px solid var(--color_main);
+	border-radius: 6px;
+	color: var(--color_main);
+}
+
+#extend_filter_items .btn_filter:hover {
+	background-color: var(--color_main);
+	color: white;
+}

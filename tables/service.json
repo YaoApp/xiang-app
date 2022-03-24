@@ -167,6 +167,17 @@
                         }
                   }
             },
+            "筛选栏": {
+                  "label": "筛选栏",
+                  "edit": {
+                        "type": "extend",
+                        "props": {
+                              "link": "/extend/filter",
+                              "value": ":name",
+                              "useJs": true
+                        }
+                  }
+            },
             "扩展内容": {
                   "label": "扩展内容",
                   "edit": {
@@ -829,22 +840,6 @@
                         "scroll": {
                               "x": 1200
                         },
-                        "checkbox": [
-                              {
-                                    "value": ":status",
-                                    "visible_label": false,
-                                    "status": [
-                                          {
-                                                "label": "开启",
-                                                "value": "enabled"
-                                          },
-                                          {
-                                                "label": "关闭",
-                                                "value": "disabled"
-                                          }
-                                    ]
-                              }
-                        ],
                         "items": [
                               {
                                     "useModal": true,
@@ -852,6 +847,14 @@
                                     "title": "查看-Modal",
                                     "icon": "icon-eye",
                                     "formName": "menu",
+                                    "formId": ":id"
+                              },
+                              {
+                                    "useModal": true,
+                                    "type": "edit",
+                                    "title": "编辑-Modal",
+                                    "icon": "icon-edit",
+                                    "formName": "service",
                                     "formId": ":id"
                               }
                         ]
@@ -866,6 +869,10 @@
                               "title": "基础信息",
                               "description": "",
                               "columns": [
+                                    {
+                                          "name": "筛选栏",
+                                          "width": 24
+                                    },
                                     {
                                           "tab": true,
                                           "items": [
