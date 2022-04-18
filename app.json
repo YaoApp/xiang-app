@@ -19,7 +19,8 @@
                   "password": {
                         "captcha": "/api/xiang/user/captcha",
                         "login": "/api/user/login"
-                  }
+                  },
+                  "admin":"/api/xiang/user/login"
             }
       },
       "storage": {
