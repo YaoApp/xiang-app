@@ -20,7 +20,23 @@
                         "captcha": "/api/xiang/user/captcha",
                         "login": "/api/user/login"
                   },
-                  "admin":"/api/xiang/user/login"
+                  "admin": "/api/xiang/user/login"
+            },
+            "user": {
+                  "reset_password": "https://www.baidu.com",
+                  "register_new": "https://www.baidu.com",
+                  "third_login": [
+                        {
+                              "icon": "/assets/baidu.svg",
+                              "name": "使用百度账号登录",
+                              "link": "https://www.baidu.com"
+                        },
+                        {
+                              "icon": "/assets/tiktok.svg",
+                              "name": "使用抖音账号登录",
+                              "link": "https://www.baidu.com"
+                        }
+                  ]
             }
       },
       "storage": {
