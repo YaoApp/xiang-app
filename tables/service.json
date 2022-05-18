@@ -370,10 +370,9 @@
                         }
                   },
                   "edit": {
-                        "type": "textArea",
+                        "type": "colorPicker",
                         "props": {
-                              "value": ":name",
-                              "rows": 3
+                              "value": ":name"
                         }
                   }
             },
