@@ -127,6 +127,7 @@
                         "type": "radioGroup",
                         "props": {
                               "value": ":radioGroup",
+                              "disabled": true,
                               "options": [
                                     {
                                           "label": "Apple",
@@ -788,7 +789,19 @@
                                     "preview": "/api/xiang/import/order/data",
                                     "preview_setting": "/api/xiang/import/order/data/setting",
                                     "import": "/api/xiang/import/order"
-                              }
+                              },
+                              "operation": [
+                                    {
+                                          "title": "通过审核",
+                                          "type": "success",
+                                          "confirm": true,
+                                          "api": "/api/xiang/table/service/on"
+                                    },
+                                    {
+                                          "title": "跳转",
+                                          "link": "https://baidu.com"
+                                    }
+                              ]
                         }
                   },
                   "update": {},
