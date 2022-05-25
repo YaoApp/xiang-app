@@ -792,12 +792,6 @@
                               },
                               "operation": [
                                     {
-                                          "title": "通过审核",
-                                          "type": "success",
-                                          "confirm": true,
-                                          "api": "/api/xiang/table/service/on"
-                                    },
-                                    {
                                           "title": "跳转",
                                           "link": "https://baidu.com"
                                     }
@@ -859,7 +853,14 @@
                                     "title": "查看-Modal",
                                     "icon": "icon-eye",
                                     "formName": "menu",
-                                    "formId": ":id"
+                                    "formId": ":id",
+                                    "disabled": {
+                                          "key": ":id",
+                                          "value": [
+                                                1,
+                                                2
+                                          ]
+                                    }
                               },
                               {
                                     "useModal": true,
