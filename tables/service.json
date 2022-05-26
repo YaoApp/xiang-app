@@ -813,6 +813,13 @@
                   "setting": {}
             },
             "option": {
+                  "actions": [
+                        {
+                              "title": "自定义跳转",
+                              "link": "/form/service/1",
+                              "width": 2
+                        }
+                  ],
                   "batch": {
                         "delete": {},
                         "columns": [
