@@ -247,7 +247,8 @@
                               "value": ":test",
                               "query": {
                                     "sort": "$index"
-                              }
+                              },
+                              "disabled": true
                         }
                   }
             },
