@@ -146,6 +146,12 @@
                   "comment": "标签多选",
                   "nullable": true,
                   "index": true
+            },
+            {
+                  "name": "tree",
+                  "type": "json",
+                  "comment": "树组件",
+                  "nullable": true
             }
       ],
       "relations": {
