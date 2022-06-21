@@ -641,11 +641,13 @@
             "创建时间": {
                   "label": "创建时间",
                   "view": {
-                        "type": "chartModal",
+                        "type": "formModal",
                         "props": {
-                              "name": "compare",
-                              "value": ":created_at",
-                              "format": "YYYY年MM月DD日 hh:mm:ss"
+                              "type":"edit",
+                              "formId":":id",
+                              "formName":"service",
+                              "settingApi":"/api/xiang/table/service/setting?test=1",
+                              "value":":created_at"
                         }
                   }
             },
