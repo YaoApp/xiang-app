@@ -110,6 +110,38 @@
                         }
                   }
             },
+            "状态指示条（上限）": {
+                  "label": "状态指示条（上限）",
+                  "edit": {
+                        "type": "chart",
+                        "props": {
+                              "type": "statusBar",
+                              "value": ":statusBar_upper",
+                              "hide_label": true,
+                              "chart_props": {
+                                    "height": 240,
+                                    "title": "状态指示条（上限）",
+                                    "limit": "upper"
+                              }
+                        }
+                  }
+            },
+            "状态指示条（下限）": {
+                  "label": "状态指示条（下限）",
+                  "edit": {
+                        "type": "chart",
+                        "props": {
+                              "type": "statusBar",
+                              "value": ":statusBar_lower",
+                              "hide_label": true,
+                              "chart_props": {
+                                    "height": 240,
+                                    "title": "状态指示条（下限）",
+                                    "limit": "lower"
+                              }
+                        }
+                  }
+            },
             "调查问卷-用户端": {
                   "label": "调查问卷-用户端",
                   "edit": {
@@ -641,13 +673,11 @@
             "创建时间": {
                   "label": "创建时间",
                   "view": {
-                        "type": "formModal",
+                        "type": "chartModal",
                         "props": {
-                              "type":"edit",
-                              "formId":":id",
-                              "formName":"service",
-                              "settingApi":"/api/xiang/table/service/setting?test=1",
-                              "value":":created_at"
+                              "name": "compare",
+                              "value": ":created_at",
+                              "format": "YYYY年MM月DD日 hh:mm:ss"
                         }
                   }
             },
@@ -951,10 +981,14 @@
                                     },
                                     {
                                           "name": "指示条",
+                                          "width": 24
+                                    },
+                                    {
+                                          "name": "状态指示条（上限）",
                                           "width": 12
                                     },
                                     {
-                                          "name": "表格图表（测试）",
+                                          "name": "状态指示条（下限）",
                                           "width": 12
                                     },
                                     {

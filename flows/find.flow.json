@@ -78,10 +78,34 @@
                   ]
             },
             {
-                  "name": "schedule",
+                  "name": "statusBar_upper",
                   "process": "xiang.helper.MapSet",
                   "args": [
                         "{{$res.indicator}}",
+                        "statusBar_upper",
+                        {
+                              "max": 3900,
+                              "value": 1300
+                        }
+                  ]
+            },
+            {
+                  "name": "statusBar_lower",
+                  "process": "xiang.helper.MapSet",
+                  "args": [
+                        "{{$res.statusBar_upper}}",
+                        "statusBar_lower",
+                        {
+                              "max": 1200,
+                              "value": 1500
+                        }
+                  ]
+            },
+            {
+                  "name": "schedule",
+                  "process": "xiang.helper.MapSet",
+                  "args": [
+                        "{{$res.statusBar_lower}}",
                         "schedule",
                         [
                               {
