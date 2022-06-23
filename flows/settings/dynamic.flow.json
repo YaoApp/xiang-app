@@ -17,9 +17,10 @@
                   "分组": {
                         "label": "分组",
                         "edit": {
-                              "type": "input",
+                              "type": "datePicker",
                               "props": {
-                                    "value": ":group"
+                                    "value": ":group",
+                                    "format": "YYYY-MM-DD"
                               }
                         }
                   },
@@ -48,8 +49,8 @@
                               "type": "treeSelect",
                               "props": {
                                     "value": ":calc",
-                                    "multiple":true,
-                                    "labelInValue":true,
+                                    "multiple": true,
+                                    "labelInValue": true,
                                     "remote": {
                                           "api": "/api/tree/search",
                                           "query": {
