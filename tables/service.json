@@ -1105,10 +1105,16 @@
                               "title": "上架",
                               "icon": "icon-arrow-up",
                               "confirm": true,
-                              "disabled": ":id",
                               "api": "/api/xiang/table/service/on",
                               "data": {
                                     "id": ":id"
+                              },
+                              "disabled": {
+                                    "key": ":id",
+                                    "value": [
+                                          1,
+                                          2
+                                    ]
                               }
                         },
                         {
