@@ -366,6 +366,186 @@
                   "price_options": [
                         "按月订阅"
                   ]
+            },
+            {
+                  "name": "腾讯云",
+                  "city": "北京",
+                  "short_name": "云主机",
+                  "score": 1200,
+                  "usage": 8,
+                  "rate": 12,
+                  "kind_id": 3,
+                  "manu_id": 1,
+                  "industries": [
+                        "教育",
+                        "能源"
+                  ],
+                  "price_options": [
+                        "按月订阅"
+                  ],
+                  "tags": [
+                        {
+                              "label": "维C",
+                              "color": "#4CAF50"
+                        },
+                        {
+                              "label": "高脂",
+                              "color": "#F50057"
+                        }
+                  ]
+            },
+            {
+                  "name": "腾讯云盘",
+                  "city": "广州",
+                  "short_name": "云磁盘",
+                  "score": 3700,
+                  "usage": 40,
+                  "rate": 4,
+                  "kind_id": 6,
+                  "manu_id": 1,
+                  "industries": [
+                        "政府",
+                        "能源"
+                  ],
+                  "price_options": [
+                        "按月订阅"
+                  ]
+            },
+            {
+                  "name": "阿里主机",
+                  "city": "上海",
+                  "short_name": "云主机",
+                  "score": 9100,
+                  "usage": 72,
+                  "rate": 24,
+                  "kind_id": 3,
+                  "manu_id": 2,
+                  "industries": [
+                        "教育",
+                        "医疗"
+                  ],
+                  "price_options": [
+                        "按月订阅"
+                  ]
+            },
+            {
+                  "name": "UCloud",
+                  "short_name": "云主机",
+                  "score": 6300,
+                  "usage": 50,
+                  "rate": 8,
+                  "city": "上海",
+                  "kind_id": 3,
+                  "manu_id": 3,
+                  "industries": [
+                        "软件",
+                        "医疗"
+                  ],
+                  "price_options": [
+                        "按月订阅"
+                  ]
+            },
+            {
+                  "name": "七牛",
+                  "short_name": "七牛",
+                  "score": 3000,
+                  "usage": 24,
+                  "rate": 6,
+                  "city": "上海",
+                  "kind_id": 3,
+                  "manu_id": 3,
+                  "industries": [
+                        "软件",
+                        "医疗"
+                  ],
+                  "price_options": [
+                        "按月订阅"
+                  ]
+            },
+            {
+                  "name": "青云",
+                  "short_name": "青云",
+                  "score": 50,
+                  "usage": 4,
+                  "rate": 2,
+                  "city": "上海",
+                  "kind_id": 3,
+                  "manu_id": 3,
+                  "industries": [
+                        "软件",
+                        "医疗"
+                  ],
+                  "price_options": [
+                        "按月订阅"
+                  ]
+            },
+            {
+                  "name": "AWS",
+                  "short_name": "AWS",
+                  "score": 12000,
+                  "usage": 95,
+                  "rate": 30,
+                  "city": "纽约",
+                  "kind_id": 3,
+                  "manu_id": 3,
+                  "industries": [
+                        "软件",
+                        "医疗"
+                  ],
+                  "price_options": [
+                        "按月订阅"
+                  ]
+            },
+            {
+                  "name": "Azure",
+                  "short_name": "Azure",
+                  "score": 8000,
+                  "usage": 60,
+                  "rate": 10,
+                  "city": "旧金山",
+                  "kind_id": 3,
+                  "manu_id": 3,
+                  "industries": [
+                        "软件",
+                        "医疗"
+                  ],
+                  "price_options": [
+                        "按月订阅"
+                  ]
+            },
+            {
+                  "name": "Vultr",
+                  "short_name": "Vultr",
+                  "score": 2000,
+                  "usage": 16,
+                  "rate": 1,
+                  "city": "纽约",
+                  "kind_id": 3,
+                  "manu_id": 3,
+                  "industries": [
+                        "软件",
+                        "医疗"
+                  ],
+                  "price_options": [
+                        "按月订阅"
+                  ]
+            },
+            {
+                  "name": "VMware",
+                  "short_name": "VMware",
+                  "score": 5000,
+                  "usage": 48,
+                  "rate": 3,
+                  "city": "帕洛阿尔托",
+                  "kind_id": 3,
+                  "manu_id": 3,
+                  "industries": [
+                        "软件",
+                        "医疗"
+                  ],
+                  "price_options": [
+                        "按月订阅"
+                  ]
             }
       ]
 }

@@ -293,6 +293,10 @@
                               "value": ":dynamic",
                               "query": {
                                     "sort": "$index"
+                              },
+                              "imports": {
+                                    "title": "导入服务",
+                                    "name": "service"
                               }
                         }
                   }

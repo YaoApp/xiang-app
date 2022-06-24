@@ -5,83 +5,217 @@
       "nodes": [],
       "output": {
             "columns": {
-                  "文字": {
-                        "label": "文字",
+                  "服务名称": {
+                        "label": "服务名称",
                         "edit": {
-                              "type": "label",
+                              "type": "colorPicker",
                               "props": {
-                                    "value": "每"
+                                    "value": ":name"
                               }
                         }
                   },
-                  "分组": {
-                        "label": "分组",
-                        "edit": {
-                              "type": "datePicker",
-                              "props": {
-                                    "value": ":group",
-                                    "format": "YYYY-MM-DD"
-                              }
-                        }
-                  },
-                  "指标类型": {
-                        "label": "指标类型",
-                        "edit": {
-                              "type": "cascader",
-                              "props": {
-                                    "value": ":type",
-                                    "remote": {
-                                          "api": "/api/cascader/search",
-                                          "query": {
-                                                "select": [
-                                                      "id",
-                                                      "name"
-                                                ],
-                                                "keyword": "where_name_like"
-                                          }
-                                    }
-                              }
-                        }
-                  },
-                  "计算符": {
-                        "label": "计算符",
-                        "edit": {
-                              "type": "treeSelect",
-                              "props": {
-                                    "value": ":calc",
-                                    "multiple": true,
-                                    "labelInValue": true,
-                                    "remote": {
-                                          "api": "/api/tree/search",
-                                          "query": {
-                                                "select": [
-                                                      "id",
-                                                      "name"
-                                                ],
-                                                "keyword": "where_name_like"
-                                          }
-                                    }
-                              }
-                        }
-                  },
-                  "数值": {
-                        "label": "数值",
+                  "所属厂商": {
+                        "label": "所属厂商",
                         "edit": {
                               "type": "select",
                               "props": {
-                                    "value": ":value",
+                                    "value": ":manu_id",
+                                    "remote": {
+                                          "api": "/api/select/search",
+                                          "query": {
+                                                "select": [
+                                                      "id",
+                                                      "name"
+                                                ]
+                                          }
+                                    }
+                              }
+                        }
+                  },
+                  "服务类型": {
+                        "label": "服务类型",
+                        "edit": {
+                              "type": "select",
+                              "props": {
+                                    "bind": "kind.id",
+                                    "value": ":kind_id",
+                                    "showSearch": true,
+                                    "remote": {
+                                          "api": "/api/kind/get",
+                                          "query": {
+                                                "select": [
+                                                      "id",
+                                                      "name"
+                                                ],
+                                                "useValue": true
+                                          }
+                                    }
+                              }
+                        }
+                  },
+                  "状态": {
+                        "label": "状态",
+                        "edit": {
+                              "type": "select",
+                              "props": {
+                                    "value": ":status",
                                     "options": [
                                           {
-                                                "label": "0",
-                                                "value": 0
+                                                "label": "开启",
+                                                "value": "enabled"
                                           },
                                           {
-                                                "label": "100",
-                                                "value": 100
+                                                "label": "关闭",
+                                                "value": "disabled"
+                                          }
+                                    ]
+                              }
+                        }
+                  },
+                  "服务领域": {
+                        "label": "服务领域",
+                        "edit": {
+                              "type": "select",
+                              "props": {
+                                    "value": ":fields",
+                                    "showSearch": true,
+                                    "mode": "multiple",
+                                    "options": [
+                                          {
+                                                "label": "视频会议",
+                                                "value": "视频会议"
                                           },
                                           {
-                                                "label": "200",
-                                                "value": 200
+                                                "label": "即时通信",
+                                                "value": "即时通信"
+                                          },
+                                          {
+                                                "label": "客服管理",
+                                                "value": "客服管理"
+                                          },
+                                          {
+                                                "label": "财务管理",
+                                                "value": "财务管理"
+                                          },
+                                          {
+                                                "label": "客户关系管理",
+                                                "value": "客户关系管理"
+                                          },
+                                          {
+                                                "label": "营销管理",
+                                                "value": "营销管理"
+                                          },
+                                          {
+                                                "label": "办公自动化",
+                                                "value": "办公自动化"
+                                          },
+                                          {
+                                                "label": "ERP",
+                                                "value": "ERP"
+                                          },
+                                          {
+                                                "label": "人力",
+                                                "value": "人力"
+                                          },
+                                          {
+                                                "label": "采购",
+                                                "value": "采购"
+                                          },
+                                          {
+                                                "label": "供应链",
+                                                "value": "供应链"
+                                          },
+                                          {
+                                                "label": "企业网盘",
+                                                "value": "企业网盘"
+                                          },
+                                          {
+                                                "label": "邮件服务",
+                                                "value": "邮件服务"
+                                          },
+                                          {
+                                                "label": "电子合同",
+                                                "value": "电子合同"
+                                          },
+                                          {
+                                                "label": "安全工具",
+                                                "value": "安全工具"
+                                          },
+                                          {
+                                                "label": "舆情分析",
+                                                "value": "舆情分析"
+                                          },
+                                          {
+                                                "label": "行业应用",
+                                                "value": "行业应用"
+                                          },
+                                          {
+                                                "label": "其他",
+                                                "value": "其他"
+                                          }
+                                    ]
+                              }
+                        }
+                  },
+                  "计费方式": {
+                        "label": "计费方式",
+                        "edit": {
+                              "type": "select",
+                              "props": {
+                                    "value": ":price_options",
+                                    "mode": "multiple",
+                                    "options": [
+                                          {
+                                                "label": "按年订阅",
+                                                "value": "按年订阅"
+                                          },
+                                          {
+                                                "label": "按月订阅",
+                                                "value": "按月订阅"
+                                          },
+                                          {
+                                                "label": "按量计费",
+                                                "value": "按量计费"
+                                          },
+                                          {
+                                                "label": "私有化部署",
+                                                "value": "私有化部署"
+                                          },
+                                          {
+                                                "label": "其他",
+                                                "value": "其他"
+                                          }
+                                    ]
+                              }
+                        }
+                  },
+                  "行业覆盖": {
+                        "label": "行业覆盖",
+                        "edit": {
+                              "type": "select",
+                              "props": {
+                                    "value": ":industries",
+                                    "mode": "multiple",
+                                    "options": [
+                                          {
+                                                "label": "房地产",
+                                                "value": "房地产"
+                                          },
+                                          {
+                                                "label": "旅游",
+                                                "value": "旅游"
+                                          },
+                                          {
+                                                "label": "教育",
+                                                "value": "教育"
+                                          },
+                                          {
+                                                "label": "互联网",
+                                                "value": "互联网"
+                                          },
+                                          {
+                                                "label": "其他",
+                                                "value": "其他"
                                           }
                                     ]
                               }
@@ -93,26 +227,32 @@
                   "layout": {
                         "columns": [
                               {
-                                    "name": "分组",
-                                    "width": 23
+                                    "name": "服务名称",
+                                    "width": 12
                               },
                               {
-                                    "name": "文字",
-                                    "width": 1
-                              }
-                        ],
-                        "children": [
-                              {
-                                    "name": "指标类型",
-                                    "width": 8
+                                    "name": "所属厂商",
+                                    "width": 12
                               },
                               {
-                                    "name": "计算符",
-                                    "width": 8
+                                    "name": "服务类型",
+                                    "width": 12
                               },
                               {
-                                    "name": "数值",
-                                    "width": 8
+                                    "name": "状态",
+                                    "width": 12
+                              },
+                              {
+                                    "name": "服务领域",
+                                    "width": 12
+                              },
+                              {
+                                    "name": "计费方式",
+                                    "width": 12
+                              },
+                              {
+                                    "name": "行业覆盖",
+                                    "width": 24
                               }
                         ]
                   }

@@ -1,4 +1,3 @@
-function main(args) {
-  var keyword = args[0] || "";
-  return "%" + keyword + "%";
+function main(res) {
+	return res.data
 }

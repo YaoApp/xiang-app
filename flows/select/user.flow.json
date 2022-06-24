@@ -1,23 +1,18 @@
 {
-  "label": "最新信息",
-  "version": "1.0.0",
-  "description": "最新信息",
-  "nodes": [
-    {
-      "name": "关键词",
-      "script": "input"
-    },
-    {
-      "name": "用户",
-      "engine": "xiang",
-      "query": {
-        "debug": true,
-        "select": ["name as label", "id as value"],
-        "from": "$xiang.user",
-        "wheres": [{ ":name": "姓名", "like": "?:$res.关键词" }],
-        "limit": 200
-      }
-    }
-  ],
-  "output": "{{$res.用户}}"
+      "label": "最新信息",
+      "version": "1.0.0",
+      "description": "最新信息",
+      "nodes": [
+            {
+                  "name": "manu",
+                  "engine": "xiang",
+                  "process": "models.manu.Paginate",
+                  "args": [
+                        {},
+                        1,
+                        20
+                  ]
+            }
+      ],
+      "output": "{{$res.manu.data}}"
 }
