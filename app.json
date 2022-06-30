@@ -7,6 +7,10 @@
             "nav_menu": "menu",
             "hide_user": true,
             "hide_menu": true,
+            "notification": {
+                  "path": "ws://127.0.0.1:5099/websocket/notification",
+                  "protocol": "yao-notification"
+            },
             "login": {
                   "image": {
                         "admin": "/extend/undraw_movie_night_re_9umk.svg",

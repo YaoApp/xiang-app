@@ -1,0 +1,19 @@
+{
+      "name": "消息通知",
+      "description": "消息通知",
+      "protocols": [
+            "yao-notification"
+      ],
+      "guard": "bearer-jwt",
+      "buffer": {
+            "read": 4096,
+            "write": 4096
+      },
+      "limit": {
+            "read-wait": 300,
+            "pong-wait": 300,
+            "max-message": 10485760
+      },
+      "timeout": 5,
+      "process": "scripts.notification.Message"
+}
