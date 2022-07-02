@@ -909,10 +909,19 @@
                               {
                                     "useModal": true,
                                     "type": "edit",
-                                    "title": "编辑-Modal",
+                                    "title": "新增-Modal",
                                     "icon": "icon-edit",
                                     "formName": "service",
-                                    "formId": ":id"
+                                    "defaultValues": [
+                                          {
+                                                "from": ":images",
+                                                "to": "images"
+                                          },
+                                          {
+                                                "from": ":kind_id",
+                                                "to": "kind_id"
+                                          }
+                                    ]
                               }
                         ]
                   }
