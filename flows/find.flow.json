@@ -85,7 +85,8 @@
                         "statusBar_upper",
                         {
                               "max": 3900,
-                              "value": 1300
+                              "value": 1300,
+                              "hidden": true
                         }
                   ]
             },
