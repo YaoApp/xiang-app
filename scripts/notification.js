@@ -8,18 +8,28 @@ function Message(msg) {
 	}
 
 	if (message.FROM === 'client') {
-		// {type:string,index:number}
-		const { type, id } = message
-		const data = getData()
+		const {
+			content: { action, data }
+		} = message
 
-		const target = {
-			unread: 11,
-			success: true,
-			type,
-			id
+		if (action === 'open') {
+			console.log(data)
+
+			return JSON.stringify({ success: data })
 		}
 
-		return JSON.stringify(target)
+		if (action === 'clear') {
+			const { type, id } = data
+
+			const target = {
+				unread: 11,
+				success: true,
+				type,
+				id
+			}
+
+			return JSON.stringify(target)
+		}
 	}
 }
 
