@@ -211,6 +211,15 @@
                         }
                   }
             },
+            "FormPrinter": {
+                  "label": "FormPrinter",
+                  "edit": {
+                        "type": "FormPrinter",
+                        "props": {
+                              "value": ":form_printer"
+                        }
+                  }
+            },
             "扩展内容": {
                   "label": "扩展内容",
                   "edit": {
@@ -937,6 +946,10 @@
                               "columns": [
                                     {
                                           "name": "筛选栏",
+                                          "width": 24
+                                    },
+                                    {
+                                          "name": "FormPrinter",
                                           "width": 24
                                     },
                                     {
