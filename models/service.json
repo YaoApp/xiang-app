@@ -152,6 +152,11 @@
                   "type": "json",
                   "comment": "树组件",
                   "nullable": true
+            },
+            {
+                  "name": "form_printer",
+                  "type": "json",
+                  "nullable": true
             }
       ],
       "relations": {
